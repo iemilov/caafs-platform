@@ -37,17 +37,34 @@ Every user is free to extend and make suggestions how to improve the application
  
 ## Getting Started
  
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Before starting the following azure resources should be deployed and configured
  
 ### Prerequisites
  
 * Azure subscription: https://azure.microsoft.com/en-us/free/
-* Azure IoT HuB: 
-* Mongo Database
-* Azure Storage
+* Azure IoT HuB 
+* Comsos DB with Mongo DB API projections
+* Azure Table/Blob Storage
 * Azure WebAPI with App Service plan
 * SendGrid Account
  
+### Configuration
+
+Once you got your azure free account you can start deploy and configure the required resources:
+
+1. Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
+
+Pricing - in order to get impression of the platform would be enough to choose free tier 8000 messages per day.
+
+**Step 1** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
+Once you created the iot hub go to endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store (see example below). 
+
+What are the consumer groups for?
+In order to distrubute the load you will create 2 consumer groups:
+- 1st consumergroup: used the service which listens to live events
+- 2nd consumer group: used by the services which triggers rules events
+
+
  
 ```
 Give examples
