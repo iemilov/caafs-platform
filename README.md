@@ -19,8 +19,8 @@ Every user is free to extend and make suggestions how to improve the application
 ## Features Overview
 
 1. **User Management**:
-  * Authentication and jwt token based authorization with Swagger and Node.js againts users stored in Mongo DB         databse
-  * admin and user roles for accessing the protected resources 
+  - Authentication and jwt token based authorization with Swagger and Node.js againts users stored in Mongo DB         databse
+  - admin and user roles for accessing the protected resources 
 2. **Create devices/objects/sensors**
 3. **Device Management**: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
 4. **Set rules** - currently the following rules are implmeneted:
