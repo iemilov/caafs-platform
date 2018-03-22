@@ -7,12 +7,12 @@ With this application you will be able get a complete ready environment hosted i
 It is up to you to choose the main configurations for the application like database name, collections names, passwords, connection strings etc. and it can be configured without touching the code of the application.
 Additionally there is a complete free suitable device client application developed to communicate with this platform and also written in node js.
  
-Every user is free to extend and make suggestions how to improve the application. If you find any bugs, feel free to submit the issues.
+Every user is free to extend and make suggestions how to improve the application. If you find any bugs, feel free to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
 !!! After deploying and configuring the application you will get a similar result as the microsoft preconfigured solution announced here: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet, but with several differences:
  
-1. In this case you won't get the environment ready with one mouse click, rather you will be able to deploy and configure the components on you own with the description provided here. You will get a very good impression which components are deployed and how to reconfigure them. The user will be free to choose even the free tier of every component as long it is possible for this resource.
-2. This application is complete based on node js - easy to understand and extend even for user with modest programming background
+1. In this case you won't get the environment ready with one mouse click, rather you will be able to deploy and configure the components on your own with the description provided here. You will get a very good impression which components are deployed and how to reconfigure them. The user will be free to choose even the free tier of every component as long it is possible for this resource.
+2. This application is completly based on node js - easy to understand and extend even for user with modest programming background
 3. The application uses the famous express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own user interface.
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
  
