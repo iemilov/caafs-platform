@@ -1,6 +1,6 @@
 # GoIoT - playground for building IoT solutions with Microsoft Azure
 
-![Alt text](https://github.com/iemilov/GoIoT-Platform-Playground/master/images/goiotAPI.png?raw=true)
+![Alt text](https://github.com/iemilov/GoIoT-Platform-Playground/master/images/goiotAPI.jpg?raw=true)
 
 GoIoT is a scalable web application for everyone who loves node js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
 With this application you will be able get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution.
