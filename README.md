@@ -24,10 +24,10 @@ Every user is free to extend and make suggestions how to improve the application
 2. **Create devices/objects/sensors**
 3. **Device Management**: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
 4. **Set rules** - currently the following rules are implmeneted:
-  * set threshold value for a particular sensor
-  * set range - trigger rule if the sensor value get outside this range
-  * track connection status - trigger rule if device get disconnected
-  * store telemetry - choose to store only sensor data based on predifend condition (delta values)
+   - set threshold value for a particular sensor
+   - set range - trigger rule if the sensor value get outside this range
+   - track connection status - trigger rule if device get disconnected
+   - store telemetry - choose to store only sensor data based on predifend condition (delta values)
 5. **Send email notifications using sendgrid** - https://sendgrid.com/
 6. **Store alarms**
 7. **Download Activity Logs**
@@ -48,14 +48,14 @@ These instructions will get you a copy of the project up and running on your loc
 * Azure WebAPI with App Service plan
 * SendGrid Account
  
-### Configuration
+### Deploying and Configuration
 
 Once you got your azure free account you can start deploying and configuring the required resources:
 
-1. **Create Storage Account** - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
+#### Create Storage Account - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
 
 
-2. Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
+#### Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
 
 Pricing - in order to get impression of the platform would be enough to choose free tier 8000 messages per day.
 
