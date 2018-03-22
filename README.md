@@ -160,7 +160,7 @@ Once you have successfully deployed the API app within your azure subscription y
 * sender email: <fromField> enter an arbitary sender email address
 * email subject: <mailSubject> enter an arbitary email subject (for example Alert)
 * email subject: <mailTemplate> enter an arbitary email template (for example Hi,<br> a new alert is)
-* email text: <mailText> enter an arbityry text(Please pay attention on the following object:    <br><br>)
+* email text: <mailText> enter an arbityry text('Please pay attention on the following object:<br><br>')
 * email signature: <mailSignature> arbitary email signature (Thanks for choosing our team <br> The Team Name)
 * telemetry container: <containerTelemetry> enter container name created in Step 5
 * telemetry file: <fileTelemetry> enter filename for telemetry data (for example telemtry.json)
