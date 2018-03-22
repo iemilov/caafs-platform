@@ -3,8 +3,8 @@
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
 GoIoT is a scalable web application for everyone who loves node js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
-With this application you will be able get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution.
-It is up to you to choose the main configurations for the application like database name, collections names, passwords, connection strings etc. and it can be configured without touching the code of the application.
+With this application you will be able to get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution.
+It is up to you to choose the main configurations for the application like database name, collections names, passwords, connection strings and etc. and it can be configured without touching the code of the application.
 Additionally there is a complete free suitable device client application developed to communicate with this platform and also written in node js.
  
 Every user is free to extend and make suggestions how to improve the application. If you find any bugs, feel free to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
@@ -19,10 +19,10 @@ Every user is free to extend and make suggestions how to improve the application
 ## Features Overview
 
 1. User Management:
-  * Authentication and jwt token based authorization with Swagger and Node.js againts user stored in Mongo DB databse
-  * admin and user roles ror accessing the protected resources 
+  * Authentication and jwt token based authorization with Swagger and Node.js againts users stored in Mongo DB databse
+  * admin and user roles for accessing the protected resources 
 2. Create devices/objects/sensors
-3. Device Management: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/creatednpoint, monitor command progress, execute waiting command. All those methods van be understood and executed by the provided device client application: https://github.com/iemilov/GoIoT-Device-Client
+3. Device Management: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
 4. set rules - currently the following rules are implmeneted:
   * set threshold value for a particular sensor
   * set range - trigger rule if the sensor value get outside this range
