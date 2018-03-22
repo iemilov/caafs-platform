@@ -42,15 +42,17 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
  
 * Azure subscription: https://azure.microsoft.com/en-us/free/
-* Azure IoT HuB 
-* Comsos DB with Mongo DB API projections
 * Azure Table/Blob Storage
-* Azure WebAPI with App Service plan
+* Azure IoT HuB 
+* Cosmos DB with Mongo DB API projections
 * SendGrid Account
+* Azure WebAPI with App Service plan
  
 ### Deploying and Configuration
 
 Once you got your azure free account you can start deploying and configuring the required resources:
+
+Before starting keep in mind that you should create all resources in the same geographical region in order to save outband costs and to use the bandwith as effective as possible
 
 #### 1. Create resource group:
 A resource group is a container for all your resources which are to be deployed in the furthere steps:
@@ -77,7 +79,7 @@ More details about azure table storage: https://docs.microsoft.com/en-us/azure/c
 
 **Step 5 Create container telemetry** - create container for storing of all sensor data coming from the objects/devices
 
-In order to simplify the future work with the devices it is recommended to use the azure storage explorer:
+In order to simplify the future work with the storage accounts it is recommended to use the azure storage explorer:
 https://azure.microsoft.com/en-us/features/storage-explorer/
 
 
@@ -85,16 +87,92 @@ https://azure.microsoft.com/en-us/features/storage-explorer/
 
 Pricing - in order to get impression of the platform would be enough to choose free tier 8000 messages per day.
 
-**Step 1 create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
-Once you created the iot hub go to endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store it. 
-
 What are the consumer groups for?
 Distributing the load accross the services which are responsible for processing the incomming messages:
 - 1st consumergroup: used the service which listens to live events
 - 2nd consumer group: used by the services which triggers rules events
 
-**Step 2 activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
+**Step 6 create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
+Once you created the iot hub go to iothub --> endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store it. 
+
+**Step 7 activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
+go to the File Upload --> click on the field Azure Storage container and choose the storage account name together with the container name for your devicelogs created in step 4 together --> save the settings
+
+see example here: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-file-upload
+
+#### 4. Azure Cosmos DB - https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-nodejs
+
+You can create this database using the description in the provided link. Comapared to the example you should choose mongo DB as API and not SQL.
+
+What is the MongoDB for?
+
+* store users documents in extra collection
+* store objects/devices/sensors documents in extra collection
+* store rules documents in extra collection
+
+Once you have successfully deployed the resource within your azure subscription you can start with configuring it:
+
+**Step 8 create database** - go to created resource via the portal --> go to collections and click on browse --> click on add Database --> give a name of your database --> click OK
+
+**Step 9 create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 tomes in order to create 3 collections (users, devices, rules)
+
+!!! You can also use you own MongoDb database, for example on premise if you have your own datacenter.
+
+#### 5. Azure Sendgrid - https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email
+
+Pricing - choose free tier 2500 mails/month
+
+What is the SendGrid for?
+Sendgrid is a third party service for sending emails.
   
+Once you have successfully deployed the sendgrid resource you only need to generate and store the API key as described in the provided example
+
+#### 6. Azure API app
+
+What is the API APP for?
+
+This is the resource which you will deploy the code to: go to azure portal and click create resource --> write API App in the search field --> click on create --> enter the name of the your application --> choose your subscription and the resource group created in the beginning --> choose free service plan F1, location and give it a name --> leave Applications insights off and create the resource.
+
+Once you have successfully deployed the API app within your azure subscription you can start with configuring the parameter:
+
+**Step 9 Configure application parameters** - Go to the created API app resource --> Settings --> Application settings and enter the following parameters step by step <key> <value>.
+
+**All parameters in left fileds (keys) within the angle brackets should be named exactly as the description below. The values are either free to choose or depends on the names created on the prvious steps** 
+                key filed                    value field
+* node version: <WEBSITE_NODE_DEFAULT_VERSION> 8.9.3
+* token issuer: <issuer> your-web-ui.com
+* shared secret: <sharedSecret> cfee02d6-c137-11e5-8d731f2d1e2e67df-welcome-on-board-goiot-true
+* endpoint IoT Hub: <endpointIoTHuB> HostName=xxx.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=xxx
+* enter consumer 1st group: <consumergroupRules> myconsumergroup1 (created in step 6 )
+* enter consumer 2nd group: <consumergroupLiveData> myconsumergroup2 (created also in step 6 )
+* connection database: <consumergroupLiveData> mongoDb connection string
+* users collection: <user.collection> users (created in step 9)
+* devices collection: <devices.collection> devices (created in step 9)
+* rules collection: <rules.collection> rules (created in step 9)
+* storage account name: <storageAccountName> name of the created storage account
+* storage account key: <storageAccountKey> the key of the created storage account
+* table alarm: <tableName> tbale name created in Step 1
+* table sentNotifications: <sentNotifications> tabale name created in Step 2
+* container platform logs: <containerNameLogs> container name created in Step 3
+* file platform logs: <fileNameLogs> platform
+* container device logs: <containerNameDeviceLogs> devicelogs (container name created in Step 4)
+* sendgrid: <sendgrid> enter the API key created through the sendgrid environment
+* sender email: <fromField> enter an arbitary sender email address
+* email subject: <mailSubject> enter an arbitary email subject (for example Alert)
+* email subject: <mailTemplate> enter an arbitary email template (for example Hi,<br> a new alert is)
+* email text: <mailText> enter an arbityry text(for example, Please pay attention on the following object:    <br><br>)
+* email signature: <mailSignature> enter an arbitary email signature (for example Thanks for choosing our team <br> The Team Name)
+* telemetry container: <containerTelemetry> enter container name created in Step 5
+* telemetry file: <fileTelemetry> enter filename for telemetry data (for example telemtry.json)
+* set file name device logs: <fileNameDeviceLogs> enter filename for telemetry data (for example /logs.txt)
+* telemetry CSV: <fileTelemetryCSV> enter filename for telemetry data (for example telemtry.csv)
+* telemetry CSV: <initialAdminPassword> enter an arbittary password for intial user (for example 46ag52c8z9)
+
+
+
+
+
+
 
 
  
