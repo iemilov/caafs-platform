@@ -17,6 +17,23 @@ Every user is free to extend and make suggestions how to improve the application
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
  
 ## Features Overview
+
+1. User Management:
+  * Authentication and jwt token based authorization with Swagger and Node.js againts user stored in Mongo DB databse
+  * admin and user roles ror accessing the protected resources 
+2. Create devices/objects/sensors
+3. Device Management: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/creatednpoint, monitor command progress, execute waiting command. All those methods van be understood and executed by the provided device client application: https://github.com/iemilov/GoIoT-Device-Client
+4. set rules - currently the following rules are implmeneted:
+  * set threshold value for a particular sensor
+  * set range - trigger rule if the sensor value get outside this range
+  * track connection status - trigger rule if device get disconnected
+  * store telemetry - choose to store only sensor data based on predifend condition (delta values)
+5. Send email notifications using sendgrid - https://sendgrid.com/
+6. Store alarms
+7. Download Activity Logs
+8. View statistic -  number of connected device/objects, storem active/resolved alarms, sent notifications
+9. Telemtry - filter data per object/device/sensor, get data in CSV format for further analytics
+
  
 ## Getting Started
  
