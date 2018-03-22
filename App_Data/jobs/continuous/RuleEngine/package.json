@@ -1,0 +1,17 @@
+{
+  "name": "ruleengine",
+  "version": "1.0.0",
+  "description": "RuleEngine for GoIoT",
+  "main": "./run.js",
+  "author": "Ivan Emilov",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "azure-event-hubs": "0.0.8",
+    "azure-iothub": "^1.2.5",
+    "azure-storage": "^2.8.0",
+    "mongodb": "^2.2.33",
+    "winston": "^2.4.0",
+    "winston-azure-blob-transport": "^0.2.7"
+  }
+}

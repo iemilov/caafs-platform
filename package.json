@@ -1,0 +1,36 @@
+{
+  "name": "goiot",
+  "version": "0.0.1",
+  "author": "Ivan Emilov",
+  "contributors": [
+    "Ivan Emilov"
+  ],
+  "description": "Swagger API",
+  "keywords": [],
+  "license": "",
+  "main": "app",
+  "dependencies": {
+    "azure-event-hubs": "0.0.8",
+    "azure-iothub": "^1.2.2",
+    "azure-storage": "^2.7.0",
+    "bcryptjs": "^2.4.3",
+    "express": "4.12.3",
+    "json2csv": "^4.0.2",
+    "jsonwebtoken": "7.3.0",
+    "level": "^2.1.2",
+    "moment": "^2.21.0",
+    "mongodb": "^2.2.35",
+    "socket.io": "^2.0.4",
+    "swagger-tools": "^0.10.1",
+    "validator": "7.0.0",
+    "winston": "^2.4.0",
+    "winston-azure-blob-transport": "^0.2.7",
+    "yamljs": "0.2.9"
+  },
+  "engines": {
+    "node": "8.9.3"
+  },
+  "scripts": {
+    "start": "node app"
+  }
+}
