@@ -18,21 +18,21 @@ Every user is free to extend and make suggestions how to improve the application
  
 ## Features Overview
 
-1. User Management:
+1. **User Management**:
   * Authentication and jwt token based authorization with Swagger and Node.js againts users stored in Mongo DB         databse
   * admin and user roles for accessing the protected resources 
-2. Create devices/objects/sensors
-3. Device Management: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
-4. set rules - currently the following rules are implmeneted:
+2. **Create devices/objects/sensors**
+3. **Device Management**: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
+4. **Set rules** - currently the following rules are implmeneted:
   * set threshold value for a particular sensor
   * set range - trigger rule if the sensor value get outside this range
   * track connection status - trigger rule if device get disconnected
   * store telemetry - choose to store only sensor data based on predifend condition (delta values)
-5. Send email notifications using sendgrid - https://sendgrid.com/
-6. Store alarms
-7. Download Activity Logs
-8. View statistic -  number of connected device/objects, storem active/resolved alarms, sent notifications
-9. Telemtry - filter data per object/device/sensor, get data in CSV format for further analytics
+5. **Send email notifications using sendgrid** - https://sendgrid.com/
+6. **Store alarms**
+7. **Download Activity Logs**
+8. **View statistic** -  number of connected device/objects, storem active/resolved alarms, sent notifications
+9. **Telemtry** - filter data per object/device/sensor, get data in CSV format for further analytics
 
  
 ## Getting Started
@@ -50,19 +50,25 @@ These instructions will get you a copy of the project up and running on your loc
  
 ### Configuration
 
-Once you got your azure free account you can start deploy and configure the required resources:
+Once you got your azure free account you can start deploying and configuring the required resources:
 
-1. Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
+1. **Create Storage Account** - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
+
+
+2. Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
 
 Pricing - in order to get impression of the platform would be enough to choose free tier 8000 messages per day.
 
-**Step 1** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
-Once you created the iot hub go to endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store (see example below). 
+**Step 1 create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
+Once you created the iot hub go to endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store it. 
 
 What are the consumer groups for?
-In order to distrubute the load you will create 2 consumer groups:
+Distributing the load accross the services which are responsible for processing the incomming messages:
 - 1st consumergroup: used the service which listens to live events
 - 2nd consumer group: used by the services which triggers rules events
+
+**Step 2 activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
+  
 
 
  
