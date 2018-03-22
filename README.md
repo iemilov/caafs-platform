@@ -1,7 +1,5 @@
 # GoIoT - playground for building IoT solutions with Microsoft Azure
 
-<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
-
 GoIoT is a scalable web application for everyone who loves node js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
 With this application you will be able to get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution.
 It is up to you to choose the main configurations for the application like database name, collections names, passwords, connection strings and etc. and it can be configured without touching the code of the application.
@@ -15,6 +13,8 @@ Every user is free to extend and make suggestions how to improve the application
 2. This application is completly based on node js - easy to understand and extend even for user with modest programming background
 3. The application uses the famous express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own user interface.
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
+
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
  
 ## Features Overview
 
@@ -52,11 +52,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 Once you got your azure free account you can start deploying and configuring the required resources:
 
-#### Create resource group:
+#### 1. Create resource group:
 A resource group is a container for all your resources which are to be deployed in the furthere steps:
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal#create-resource-group
 
-#### 1. Create Storage Account - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
+#### 2. Create Storage Account - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
 
 What is the storage account for?
 
@@ -81,7 +81,7 @@ In order to simplify the future work with the devices it is recommended to use t
 https://azure.microsoft.com/en-us/features/storage-explorer/
 
 
-#### Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
+#### 3. Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
 
 Pricing - in order to get impression of the platform would be enough to choose free tier 8000 messages per day.
 
