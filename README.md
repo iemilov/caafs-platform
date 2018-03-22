@@ -20,14 +20,14 @@ Every user is free to extend and make suggestions how to improve the application
 
 1. **User Management**:
    - Authentication and jwt token based authorization with Swagger and Node.js againts users stored in Mongo DB         databse
-   - admin and user roles for accessing the protected resources 
+   - admin and user roles for accessing the protected resources
 2. **Create devices/objects/sensors**
 3. **Device Management**: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
 4. **Set rules** - currently the following rules are implmeneted:
-   - set threshold value for a particular sensor
+   - set threshold value for a particular object/device/sensor relation
    - set range - trigger rule if the sensor value get outside this range
    - track connection status - trigger rule if device get disconnected
-   - store telemetry - choose to store only sensor data based on predifend condition (delta values)
+   - store telemetry - choose to store only sensor data based on predifend conditions (delta values)
 5. **Send email notifications using sendgrid** - https://sendgrid.com/
 6. **Store alarms**
 7. **Download Activity Logs**
@@ -63,9 +63,23 @@ What is the storage account for?
 * store alarms and sent notifications in table storage
 * store telemetry data, device logs and platform logs in blob container
 
-Configuration steps:
+Once you have successfully deployed the storage within your azure subscription you can start with configuring it:
 
-**Step 1 Create tables** 
+**Step 1 Create alarm table** - open yout storage account in the azure portal --> go to tables --> go to the plus symbol and create table. Give a name for the table where the application will store all alarms (for example name "alarms")
+
+**Step 2 Create sent notifications table** - create another table where the application will store all sent notifications for statistic purposes.
+
+More details about azure table storage: https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-overview
+
+**Step 3 Create container platform logs** -  from the portal again --> go to blobs --> go to plus symbol and create container with access level private for storing all the platform logs (example "platform-logs")
+
+**Step 4 Create container device logs** - create container for device logs(for example "devicelogs")
+
+**Step 5 Create container telemetry** - create container for storing of all sensor data coming from the objects/devices
+
+In order to simplify the future work with the devices it is recommended to use the azure storage explorer:
+https://azure.microsoft.com/en-us/features/storage-explorer/
+
 
 #### Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
 
