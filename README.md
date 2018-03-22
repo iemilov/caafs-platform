@@ -52,8 +52,20 @@ These instructions will get you a copy of the project up and running on your loc
 
 Once you got your azure free account you can start deploying and configuring the required resources:
 
+#### Create resource group:
+A resource group is a container for all your resources which are to be deployed in the furthere steps:
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal#create-resource-group
+
 #### Create Storage Account - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
 
+What is the storage account for?
+
+* store alarms and sent notifications in table storage
+* store telemetry data, device logs and platform logs in blob container
+
+Configuration steps:
+
+**Step 1 Create tables** 
 
 #### Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
 
@@ -149,19 +161,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Inspiration
 * etc
  
- 
-Best Regards,
-Ivan Emilov
-T-Systems International GmbH
-Digital Division - Digital Design & Development
-Platform Development
-Pascalstraße 11, 10587 Berlin
-+49 15126049573  (Mobil)
-E-Mail: ivan.emilov@t-systems.com
-Internet: http://www.t-systems.de
- 
-Die gesetzlichen Pflichtangaben finden Sie unter: 
-www.t-systems.de/pflichtangaben
- 
-Hinweis: Diese E-Mail und/oder die Anhänge sind vertraulich und ausschließlich für den bezeichneten Adressaten bestimmt. Die Weitergabe oder Kopieren dieser E-Mail ist strengstens verboten. Wenn Sie diese E-Mail irrtümlich erhalten haben, informieren Sie bitte unverzüglich den Absender und vernichten Sie die Nachricht und alle Anhänge. Vielen Dank.
-Große Veränderungen fangen klein an – Ressourcen schonen und nicht jede E-Mail drucken.
