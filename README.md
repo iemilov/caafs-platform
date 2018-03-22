@@ -56,7 +56,7 @@ Once you got your azure free account you can start deploying and configuring the
 A resource group is a container for all your resources which are to be deployed in the furthere steps:
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal#create-resource-group
 
-#### Create Storage Account - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
+#### 1. Create Storage Account - https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account
 
 What is the storage account for?
 
