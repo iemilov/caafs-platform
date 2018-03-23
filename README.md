@@ -186,7 +186,7 @@ Example: <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/mas
 
 Once you entered the final apllication setting you are ready to deploy your code. Before doing that, one additional step should be executed:
 
-**Step 13 Create LocalGit within the Azure API app**
+**Step 14 Create LocalGit within the Azure API app**
 
 * Go to the API app resource via the portal
 * Under Deployment, cick Deployment credentials
@@ -202,15 +202,14 @@ The Deployment credentials blade provides FTP credential settings that you need 
 https://YOURUSERNAME@API_APP_NAME.scm.azurewebsites.net:443/API_APP_NAME.git
 ```
 
-##### Run the application locally
-  
+### Run the application locally
+
+1. Install node js on your local machine: https://nodejs.org/en/download/
 1. Clone the repository on your local machine
 
 ```
 git clone https://github.com/iemilov/GoIoT-Platform-Playground.git
 ```
-
-2. Install node js on your local machine: https://nodejs.org/en/download/
 
 3. Install the required node modules:
  
@@ -238,6 +237,31 @@ localhost:8001/docs
 ```
 
 6. Test the application:
+
+After the initial deployment an admin username "admin@mail.com" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser ogo to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box:
+
+```
+{
+  "username": "admin@mail.com",
+  "password": "intial password from Step 13 for the application settings and config.js"
+}
+```
+
+In the response body you should get an answer:
+
+```
+{
+        "token": "jwt token" //This token will expire in 24 hours
+}
+```
+
+From now you can start using the other APIs by using the Authorization paramter in the Header for every request:
+
+```
+{
+        Authorization: Bearer token you get form the Authentication request
+}
+```
 
  
 ##### Running locally
