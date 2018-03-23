@@ -80,7 +80,7 @@ More details about azure table storage: https://docs.microsoft.com/en-us/azure/c
 
 **Step 4 Create container device logs** - create container for device logs(for example "devicelogs")
 
-**Step 5 Create container telemetry** - create container for storing of all sensor data coming from the objects/devices
+**Step 5 Create endpoint for telemetry data** - create container for storing of all sensor data coming from the objects/devices (example name telemetry). Create a file within this container which will hold all telemetry data ( example name telemetry.json)
 
 **Step 6 Store account key** - store the firts key from the example below - you will need it for the application settings
 
