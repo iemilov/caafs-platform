@@ -103,6 +103,10 @@ go to the File Upload --> click on the field Azure Storage container and choose 
 
 see example here: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-file-upload
 
+**Step 9 get connection string for IoT Hub** - you will need this connection string for the application settings.
+
+Find the connection string: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-node-device-management-get-started
+
 #### 4. Azure Cosmos DB - https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-nodejs
 
 You can create this database using the description in the provided link. Comapared to the example you should choose mongo DB as API and not SQL.
@@ -115,9 +119,16 @@ What is the MongoDB for?
 
 Once you have successfully deployed the resource within your azure subscription you can start with configuring it:
 
-**Step 8 create database** - go to created resource via the portal --> go to collections and click on browse --> click on add Database --> give a name of your database --> click OK
+**Step 10 create database** - go to created resource via the portal --> go to collections and click on browse --> click on add Database --> give a name of your database --> click OK
 
-**Step 9 create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 tomes in order to create 3 collections (users, devices, rules)
+**Step 11 create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 tomes in order to create 3 collections (users, devices, rules)
+
+**Step 11 get MongoDb connection string** - you will need this connection string for the application settings. In this case you should add the created database name (Step 10) to the connection string. The final connection string should look like the example below: The bold font shows the position wehere to place the database name
+
+```
+mongodb://examplename:xyz==@examplename.documents.azure.com:10255/**goiot**?ssl=true&replicaSet=globaldb
+```
+Find the connection string: https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account
 
 !!! You can also use you own MongoDb database, for example on premise if you have your own datacenter.
 
@@ -138,7 +149,7 @@ This is the resource which you will deploy the code to: go to azure portal and c
 
 Once you have successfully deployed the API app within your azure subscription you can start with configuring the parameter:
 
-**Step 9 Configure application parameters** - Go to the created API app resource --> Settings --> Application settings and enter the following parameters step by step <key> <value>.
+**Step 12 Configure application parameters** - Go to the created API app resource --> Settings --> Application settings and enter the following parameters step by step <key> <value>.
 
 **All parameters in left fields in bold (keys) font should be named exactly as the description below. The values are either free to choose or depends on the names created on the prvious steps** 
 
