@@ -3,11 +3,11 @@
 GoIoT is a scalable web application for everyone who loves node js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
 With this application you will be able to get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution.
 It is up to you to choose the main configurations for the application like database name, collections names, passwords, connection strings and etc. and it can be configured without touching the code of the application.
-Additionally there is a complete free suitable device client application developed to communicate with this platform and also written in node js.
+Additionally there is a complete free suitable device client application developed to communicate with this platform and is also written in node js.
  
 Every user is free to extend and make suggestions how to improve the application. If you find any bugs, feel free to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
-!!! After deploying and configuring the application you will get a similar result as the microsoft preconfigured solution announced here: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet, but with several differences:
+**Note**: After deploying and configuring the application you will get a similar result as the microsoft preconfigured solution announced here: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet, but with several differences:
  
 1. In this case you won't get the environment ready with one mouse click, rather you will be able to deploy and configure the components on your own with the description provided here. You will get a very good impression which components are deployed and how to reconfigure them. The user will be free to choose even the free tier of every component as long it is possible for this resource.
 2. This application is completly based on node js - easy to understand and extend even for user with modest programming background
@@ -19,8 +19,8 @@ Every user is free to extend and make suggestions how to improve the application
 ## Features Overview
 
 1. **User Management**:
-   - Authentication and jwt token based authorization with Swagger and Node.js againts users stored in Mongo DB         databse
-   - admin and user roles for accessing the protected resources
+   - Authentication and Jwt token based authorization with Swagger and Node.js for users stored in Mongo DB databse
+   - Distinguish between admin and user roles for accessing the protected resources
 2. **Create devices/objects/sensors**
 3. **Device Management**: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
 4. **Set rules** - currently the following rules are implmeneted:
@@ -40,7 +40,7 @@ Every user is free to extend and make suggestions how to improve the application
  
 ## Getting Started
  
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Before starting the following azure resources should be deployed and configured
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Before starting, the following azure resources should be deployed and configured:
  
 ### Prerequisites
  
@@ -53,9 +53,9 @@ These instructions will get you a copy of the project up and running on your loc
  
 ### Deploying and Configuration
 
-Once you got your azure free account you can start deploying and configuring the required resources:
+Once you got your azure free account, you can start deploying and configuring the required resources:
 
-Before starting keep in mind that you should create all resources in the same geographical region in order to save outband costs and to use the bandwith as effective as possible
+**Note**: before starting keep in mind that you should create all resources in the same geographical region in order to save outband costs and to use the bandwith as effective as possible!
 
 #### 1. Create resource group:
 A resource group is a container for all your resources which are to be deployed in the furthere steps:
@@ -68,9 +68,9 @@ What is the storage account for?
 * store alarms and sent notifications in table storage
 * store telemetry data, device logs and platform logs in blob container
 
-Once you have successfully deployed the storage within your azure subscription you can start with configuring it:
+Once you have successfully deployed the storage account within your azure subscription you can start with configuring it:
 
-**Step 1 Create alarm table** - open yout storage account in the azure portal --> go to tables --> go to the plus symbol and create table. Give a name for the table where the application will store all alarms (for example name "alarms")
+**Step 1 Create alarm table** - open yout storage account resource in the azure portal --> go to tables --> go to the plus symbol and create table. Give a name for the table where the application will store all alarms (for example "alarms")
 
 **Step 2 Create sent notifications table** - create another table where the application will store all sent notifications for statistic purposes.
 
@@ -99,10 +99,10 @@ Distributing the load accross the services which are responsible for processing 
 - 2nd consumer group: used by the services which triggers rules events
 
 **Step 7 Create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
-Once you created the iot hub go to iothub --> endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store it. 
+Once you created the iot hub go to iothub resource via the portal --> endpoints --> Built-in endpoints --> events --> add the name of the consumer group for the RulesEngine (for example rules) under 'consumer groups' and store it. Repeat this action and create another consumer group fo the livedata.
 
 **Step 8 Activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
-go to the File Upload --> click on the field Azure Storage container and choose the storage account name together with the container name for your devicelogs created in step 4 together --> save the settings
+go to the File Upload --> click on the field Azure Storage container and choose the storage account name together with the container name for your devicelogs created in Step 4 --> save the settings
 
 see example here: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-file-upload
 
@@ -117,14 +117,14 @@ You can create this database using the description in the provided link. Comapar
 What is the MongoDB for?
 
 * store users documents in extra collection
-* store objects/devices/sensors documents in extra collection
+* store objects/devices/sensors realtions in extra collection
 * store rules documents in extra collection
 
 Once you have successfully deployed the resource within your azure subscription you can start with configuring it:
 
 **Step 10 Create database** - go to created resource via the portal --> go to collections and click on browse --> click on add Database --> give a name of your database --> click OK
 
-**Step 11 Create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 tomes in order to create 3 collections (users, devices, rules)
+**Step 11 Create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 times in order to create 3 collections (users, devices, rules)
 
 **Step 12 Get MongoDb connection string** - you will need this connection string for the application settings. In this case you should add the created database name (Step 10) to the connection string. The final connection string should look like the example below: The capital letters in the example shows the position wehere to place the database name
 
@@ -133,7 +133,7 @@ mongodb://examplename:xyz==@examplename.documents.azure.com:10255/DATABASENAME?s
 ```
 Find the connection string: https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account
 
-!!! You can also use you own MongoDb database, for example on premise if you have your own datacenter.
+**Note**: you can also use your own MongoDb database, for example on premise if you have your own datacenter.
 
 #### 5. Azure Sendgrid - https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email
 
@@ -186,6 +186,8 @@ Example: <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/mas
 * set file name device logs: **fileNameDeviceLogs**: enter filename ending for device logs (for example /logs.txt)
 * telemetry CSV: **fileTelemetryCSV**: enter filename for CSV telemetry data (for example telemetry.csv)
 * initial password: **initialAdminPassword**: enter an arbittary password for intial user (for example 46ag52c8z9)
+
+**Note**: Please be aware that the RulesEngine together with the StoreTelemetry service are running as continious CRON jobs within the application. In general The "Always on options" within the Application settings should be activated if you have continious running WebJobs like in this case. If you want to activate it, you should upgrade the App Service plan to Standrard. In the case of using the free plan as recommended in this description the WebJobs will go from time to time down after the application have been idle.
 
 Once you entered the final apllication setting you are ready to deploy your code. Before doing that, one additional step should be executed:
 
