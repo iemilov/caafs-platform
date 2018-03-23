@@ -284,7 +284,7 @@ Use the git credentials created in Step 14 from the Configuration steps
 The first deployment can take sevral minutes. Once the deployment is finished you should be able to see your API app under the following url:
 
 ```
-http(s)://goiotapi.azurewebsites.net/docs/
+http(s)://NAMEOFYOURAPIAPP.azurewebsites.net/docs/
 ```
 3. Login through the http://goiotapi.azurewebsites.net/api/login with the initial username and password
 
