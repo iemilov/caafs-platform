@@ -36,7 +36,7 @@ Every user is free to extend and make suggestions how to improve the application
 
 ## Architecture Overview
 
-<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/GoIoTnew.jpg" style=" width:100px ; height:100px " />
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/architecture.png" style=" width:100px ; height:100px " />
  
 ## Getting Started
  
