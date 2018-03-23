@@ -34,6 +34,7 @@ Every user is free to extend and make suggestions how to improve the application
 8. **View statistic** -  number of connected device/objects, storem active/resolved alarms, sent notifications
 9. **Telemtry** - filter data per object/device/sensor, get data in CSV format for further analytics
 
+## Architecture Overview
  
 ## Getting Started
  
@@ -151,7 +152,7 @@ Once you have successfully deployed the API app within your azure subscription y
 
 **Step 13 Configure application parameters** - Go to the created API app resource --> Settings --> Application settings and enter the following parameters step by step <key> <value>.
 
-**All parameters in left fields in bold (keys) font should be named exactly as the description below. The values are either free to choose or depends on the names created on the prvious steps** 
+**All parameters in left fields in bold (keys) font should be named exactly as the description below. The values are either free to choose or depends on the names created on the prvious steps**
 
 Example: <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/applicationsettings.png" style=" width:100px ; height:100px " />
 
@@ -205,7 +206,7 @@ https://YOURUSERNAME@API_APP_NAME.scm.azurewebsites.net:443/API_APP_NAME.git
 ### Run the application locally
 
 1. Install node js on your local machine: https://nodejs.org/en/download/
-1. Clone the repository on your local machine
+2. Clone the repository on your local machine
 
 ```
 git clone https://github.com/iemilov/GoIoT-Platform-Playground.git
@@ -263,18 +264,36 @@ From now you can start using the other APIs by using the Authorization paramter 
 }
 ```
 
- 
-##### Running locally
- 
-##### Running on the cloud
- 
-End with an example of getting some data out of the system or using it for a little demo
- 
+### Run the application on Azure
+
+1. Bring the config.js in the initial state with all "process.env" parameters
+
+2. Deploy the code to the local git created in Step 14 from the configuration steps
+
+```
+git remote add apiapp <Git clone URL from Step 14>
+git push apiapp master:master
+```
+
+Use the git credentials created in Step 14 from the Configuration steps
+
+The first deployment can take sevral minutes. Once the deployment is finished you should be able to see your API app under the following url:
+
+```
+http(s)://goiotapi.azurewebsites.net/docs/
+```
+3. Login through the http://goiotapi.azurewebsites.net/api/login with the initial username and password
+
+4. Get the token and start using the other APIs as described "Run the application locally"
+
+**Note**: If you test the APIs on the Browser please be sure that you load the main url only with http// and not htpps// since you do not have the htpps certifactes on your local machine
+
+
 ## Running the tests
  
 Currently no automated tests are implemented! It is on the project roadmap.
  
-### End to End
+### E2E test
  
 connect a real or simulated device with the platform
  
@@ -283,15 +302,6 @@ Explain what these tests test and why
 ```
 Give an example
 ```
- 
-### And coding style tests
- 
-Explain what these tests test and why
- 
-```
-Give an example
-```
- 
  
 ## Contributing
  
@@ -303,7 +313,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
  
 ## Authors
  
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ivan Emilov** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
  
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
  
