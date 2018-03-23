@@ -139,6 +139,7 @@ Once you have successfully deployed the API app within your azure subscription y
 
 **All parameters in left fileds (keys) within the angle brackets should be named exactly as the description below. The values are either free to choose or depends on the names created on the prvious steps** 
                 key filed                    value field
+ * node version:  <p style='color:red'>This is some red text.</p>
 * node version: <WEBSITE_NODE_DEFAULT_VERSION> 8.9.3
 * token issuer: ```diff -issuer``` your-web-ui.com
 * shared secret: <sharedSecret> cfee02d6-c137-11e5-8d731f2d1e2e67df-welcome-on-board-goiot-true
