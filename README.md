@@ -95,15 +95,15 @@ Distributing the load accross the services which are responsible for processing 
 - 1st consumergroup: used the service which listens to live events
 - 2nd consumer group: used by the services which triggers rules events
 
-**Step 7 create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
+**Step 7 Create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
 Once you created the iot hub go to iothub --> endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store it. 
 
-**Step 8 activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
+**Step 8 Activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
 go to the File Upload --> click on the field Azure Storage container and choose the storage account name together with the container name for your devicelogs created in step 4 together --> save the settings
 
 see example here: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-file-upload
 
-**Step 9 get connection string for IoT Hub** - you will need this connection string for the application settings.
+**Step 9 Store connection string for IoT Hub** - you will need this connection string for the application settings.
 
 Find the connection string: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-node-device-management-get-started
 
@@ -119,14 +119,14 @@ What is the MongoDB for?
 
 Once you have successfully deployed the resource within your azure subscription you can start with configuring it:
 
-**Step 10 create database** - go to created resource via the portal --> go to collections and click on browse --> click on add Database --> give a name of your database --> click OK
+**Step 10 Create database** - go to created resource via the portal --> go to collections and click on browse --> click on add Database --> give a name of your database --> click OK
 
-**Step 11 create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 tomes in order to create 3 collections (users, devices, rules)
+**Step 11 Create collections** - after successfully creating the database --> go to add collection --> choose the created database in the previous step --> give a collection name (for example users) --> choose storage capacity 10GB and put 400 in the throughput field to save costs. You should execute this step 3 tomes in order to create 3 collections (users, devices, rules)
 
-**Step 11 get MongoDb connection string** - you will need this connection string for the application settings. In this case you should add the created database name (Step 10) to the connection string. The final connection string should look like the example below: The bold font shows the position wehere to place the database name
+**Step 12 Get MongoDb connection string** - you will need this connection string for the application settings. In this case you should add the created database name (Step 10) to the connection string. The final connection string should look like the example below: The capital letters in the example shows the position wehere to place the database name
 
 ```
-mongodb://examplename:xyz==@examplename.documents.azure.com:10255/**goiot**?ssl=true&replicaSet=globaldb
+mongodb://examplename:xyz==@examplename.documents.azure.com:10255/DATABASENAME?ssl=true&replicaSet=globaldb
 ```
 Find the connection string: https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account
 
@@ -149,7 +149,7 @@ This is the resource which you will deploy the code to: go to azure portal and c
 
 Once you have successfully deployed the API app within your azure subscription you can start with configuring the parameter:
 
-**Step 12 Configure application parameters** - Go to the created API app resource --> Settings --> Application settings and enter the following parameters step by step <key> <value>.
+**Step 13 Configure application parameters** - Go to the created API app resource --> Settings --> Application settings and enter the following parameters step by step <key> <value>.
 
 **All parameters in left fields in bold (keys) font should be named exactly as the description below. The values are either free to choose or depends on the names created on the prvious steps** 
 
@@ -158,63 +158,87 @@ Example: <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/mas
 * node version: **WEBSITE_NODE_DEFAULT_VERSION**: 8.9.3
 * token issuer: **issuer**: your-web-ui.com (free to choose)
 * shared secret: **sharedSecret**: cfee02d6-c137-11e5-8d731f2d1e2e67df-welcome-on-board-goiot-true (free to choose)
-* endpoint IoT Hub: **endpointIoTHuB**: IoT hub connection string from step 7
-* enter consumer 1st group: **consumergroupRules**: the consumer group for rules created in step 6 
-* enter consumer 2nd group: **consumergroupLiveData**: the consumer group for live data created also in step 6 
-* connection database: **consumergroupLiveData**: mongoDb connection string created in step 
-* users collection: **user.collection**: users (created in step 9)
-* devices collection: **devices.collection**: devices (created in step 9)
-* rules collection: **rules.collection**: rules (created in step 9)
-* storage account name: **storageAccountName**: name of the created storage account
-* storage account key: **storageAccountKey**: the key of the created storage account
-* table alarm: **tableName**: tbale name created in Step 1
+* endpoint IoT Hub: **endpointIoTHuB**: IoT hub connection string from Step 9
+* enter consumer 1st group: **consumergroupRules**: the consumer group for rules created in Step 7
+* enter consumer 2nd group: **consumergroupLiveData**: the consumer group for live data created also in Step 7 
+* connection database: **consumergroupLiveData**: mongoDb connection string created in Step 12
+* users collection: **user.collection**: users collection created in Step 11
+* devices collection: **devices.collection**: devices collection created in Step 11
+* rules collection: **rules.collection**: rules collection created in Step 11
+* storage account name: **storageAccountName**: name of the created storage account at the beginning
+* storage account key: **storageAccountKey**: the account key from Step 6
+* table alarm: **tableName**: tabale name for alarms created in Step 1
 * table sentNotifications: **sentNotifications**: tabale name created in Step 2
 * container platform logs: **containerNameLogs**: container name created in Step 3
-* file platform logs: **fileNameLogs**: platform
-* container device logs: **containerNameDeviceLogs**: devicelogs (container name created in Step 4)
+* file platform logs: **fileNameLogs**: platform (free to choose)
+* container device logs: **containerNameDeviceLogs**: devicelogs container name created in Step 4
 * sendgrid: **sendgrid**: enter the API key created through the sendgrid environment
-* sender email: **fromField**: enter an arbitary sender email address
+* sender email: **fromField**: enter an arbitary sender email address (free to choose)
 * email subject: **mailSubject**: enter an arbitary email subject (for example Alert)
-* email subject: **mailTemplate**: enter an arbitary email template (for example Hi,<br> a new alert is)
-* email text: **mailText**: enter an arbityry text(Please pay attention on the following object:)
-* email signature: **mailSignature**: arbitary email signature (Thanks for choosing our team The Team Name)
-* telemetry container: **containerTelemetry**: enter container name created in Step 5
-* telemetry file: **fileTelemetry**: enter filename for telemetry data (for example telemtry.json)
-* set file name device logs: **fileNameDeviceLogs**: enter filename for telemetry data (for example /logs.txt)
-* telemetry CSV: **fileTelemetryCSV**: enter filename for telemetry data (for example telemtry.csv)
+* email subject: **mailTemplate**: enter an arbitary email template, for example Hi, a new alert is, (free to choose)
+* email text: **mailText**: enter an arbityry text(example: Please pay attention on the following object:)
+* email signature: **mailSignature**: arbitary email signature (example: Thanks for choosing our team, The Team Name)
+* telemetry container: **containerTelemetry**: container name created in Step 5
+* telemetry file: **fileTelemetry**: enter filename for telemetry data (for example telemetry.json)
+* set file name device logs: **fileNameDeviceLogs**: enter filename ending for device logs (for example /logs.txt)
+* telemetry CSV: **fileTelemetryCSV**: enter filename for CSV telemetry data (for example telemetry.csv)
 * initial password: **initialAdminPassword**: enter an arbittary password for intial user (for example 46ag52c8z9)
 
+Once you entered the final apllication setting you are ready to deploy your code. Before doing that, one additional step should be executed:
 
+**Step 13 Create LocalGit within the Azure API app**
 
+* Go to the API app resource via the portal
+* Under Deployment, cick Deployment credentials
+The Deployment credentials blade provides FTP credential settings that you need in order to deploy your site via FTP. Since Git and FTP can't authenticate using your Azure account information, you will be creating a new username and password that Git and FTP can use when deploying code to your Azure subscriptions
+* In the FTP/deployment username textbox, enter the username that you want to use
+* In the password and Confirm password textboxes, enter the password that you want to use
+* At the top of the blade, to save your changes, click Save
+* On the left side menu, click on Deployment Options
+* On the Deployment source blade, click Source, and the click Local Git Repository
+* Click OK to save the changes
+* On the left menu go to Overview and store the Git Clone Url. The url should looke like:
+```
+https://YOURUSERNAME@API_APP_NAME.scm.azurewebsites.net:443/API_APP_NAME.git
+```
 
+##### Run the application locally
+  
+1. Clone the repository on your local machine
 
+```
+git clone https://github.com/iemilov/GoIoT-Platform-Playground.git
+```
 
+2. Install node js on your local machine: https://nodejs.org/en/download/
 
-
+3. Install the required node modules:
  
 ```
-Give examples
+npm install
 ```
- 
-### Installing
- 
-A step by step series of examples that tell you have to get a development env running
- 
-1. Configure the deployed Azure resources
-        .
-2. Deploy the web application
-        . git clone
-3. Test your deployment
- 
+4. Change the configuration parameters in config.js: https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/api/config.js
+
+Copy the whole content from config.js and store it separtely as backup. You will need it in this state for the final cloud deployment. But in order to start the application locally you should replace everywhere the "process.env" part with the real parameters created in the configuratioon steps. For example:
+
 ```
-Give the example
+replace config.connectionString = process.env['endpointIoTHuB'] WITH config.connectionString = 'conn string from Step 9'
 ```
- 
-And repeat
+
+5. Start the application:
  
 ```
-until finished
+npm start
 ```
+
+If you have done everything correct, you should be able to access the API app on:
+
+```
+localhost:8001/docs
+```
+
+6. Test the application:
+
  
 ##### Running locally
  
