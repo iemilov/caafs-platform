@@ -79,9 +79,12 @@ More details about azure table storage: https://docs.microsoft.com/en-us/azure/c
 
 **Step 5 Create container telemetry** - create container for storing of all sensor data coming from the objects/devices
 
+**Step 6 Store account key** - store the firts key from the example below - you will need it for the application settings
+
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/accountkey.png" style=" width:100px ; height:100px " />
+
 In order to simplify the future work with the storage accounts it is recommended to use the azure storage explorer:
 https://azure.microsoft.com/en-us/features/storage-explorer/
-
 
 #### 3. Azure IoT Hub - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal
 
@@ -92,10 +95,10 @@ Distributing the load accross the services which are responsible for processing 
 - 1st consumergroup: used the service which listens to live events
 - 2nd consumer group: used by the services which triggers rules events
 
-**Step 6 create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
+**Step 7 create consumer Groupes** - add 2 consumer groups: https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features. 
 Once you created the iot hub go to iothub --> endpoints --> Built-in endpoints --> events --> add the name of the consumer group (for example myconsumergroup1) under 'consumer groups' and store it. 
 
-**Step 7 activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
+**Step 8 activate File Upload** - https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-file-upload
 go to the File Upload --> click on the field Azure Storage container and choose the storage account name together with the container name for your devicelogs created in step 4 together --> save the settings
 
 see example here: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-file-upload
@@ -141,34 +144,34 @@ Once you have successfully deployed the API app within your azure subscription y
 
 Example: <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/applicationsettings.png" style=" width:100px ; height:100px " />
 
-* node version: **WEBSITE_NODE_DEFAULT_VERSION** 8.9.3
-* token issuer: **issuer** your-web-ui.com
-* shared secret: **sharedSecret** cfee02d6-c137-11e5-8d731f2d1e2e67df-welcome-on-board-goiot-true
-* endpoint IoT Hub: **endpointIoTHuB** HostName=xxx.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=xxx
-* enter consumer 1st group: **consumergroupRules** myconsumergroup1 (created in step 6 )
-* enter consumer 2nd group: **consumergroupLiveData** myconsumergroup2 (created also in step 6 )
-* connection database: **consumergroupLiveData** mongoDb connection string
-* users collection: **user.collection** users (created in step 9)
-* devices collection: **devices.collection** devices (created in step 9)
-* rules collection: **rules.collection** rules (created in step 9)
-* storage account name: **storageAccountName** name of the created storage account
-* storage account key: **storageAccountKey** the key of the created storage account
-* table alarm: **tableName** tbale name created in Step 1
-* table sentNotifications: **sentNotifications** tabale name created in Step 2
-* container platform logs: **containerNameLogs** container name created in Step 3
-* file platform logs: **fileNameLogs** platform
-* container device logs: **containerNameDeviceLogs** devicelogs (container name created in Step 4)
-* sendgrid: **sendgrid** enter the API key created through the sendgrid environment
-* sender email: **fromField** enter an arbitary sender email address
-* email subject: **mailSubject** enter an arbitary email subject (for example Alert)
-* email subject: **mailTemplate** enter an arbitary email template (for example Hi,<br> a new alert is)
-* email text: **mailText** enter an arbityry text(Please pay attention on the following object:)
-* email signature: **mailSignature** arbitary email signature (Thanks for choosing our team The Team Name)
-* telemetry container: **containerTelemetry** enter container name created in Step 5
-* telemetry file: **fileTelemetry** enter filename for telemetry data (for example telemtry.json)
-* set file name device logs: **fileNameDeviceLogs** enter filename for telemetry data (for example /logs.txt)
-* telemetry CSV: **fileTelemetryCSV** enter filename for telemetry data (for example telemtry.csv)
-* initial password: **initialAdminPassword** enter an arbittary password for intial user (for example 46ag52c8z9)
+* node version: **WEBSITE_NODE_DEFAULT_VERSION**: 8.9.3
+* token issuer: **issuer**: your-web-ui.com (free to choose)
+* shared secret: **sharedSecret**: cfee02d6-c137-11e5-8d731f2d1e2e67df-welcome-on-board-goiot-true (free to choose)
+* endpoint IoT Hub: **endpointIoTHuB**: IoT hub connection string from step 7
+* enter consumer 1st group: **consumergroupRules**: the consumer group for rules created in step 6 
+* enter consumer 2nd group: **consumergroupLiveData**: the consumer group for live data created also in step 6 
+* connection database: **consumergroupLiveData**: mongoDb connection string created in step 
+* users collection: **user.collection**: users (created in step 9)
+* devices collection: **devices.collection**: devices (created in step 9)
+* rules collection: **rules.collection**: rules (created in step 9)
+* storage account name: **storageAccountName**: name of the created storage account
+* storage account key: **storageAccountKey**: the key of the created storage account
+* table alarm: **tableName**: tbale name created in Step 1
+* table sentNotifications: **sentNotifications**: tabale name created in Step 2
+* container platform logs: **containerNameLogs**: container name created in Step 3
+* file platform logs: **fileNameLogs**: platform
+* container device logs: **containerNameDeviceLogs**: devicelogs (container name created in Step 4)
+* sendgrid: **sendgrid**: enter the API key created through the sendgrid environment
+* sender email: **fromField**: enter an arbitary sender email address
+* email subject: **mailSubject**: enter an arbitary email subject (for example Alert)
+* email subject: **mailTemplate**: enter an arbitary email template (for example Hi,<br> a new alert is)
+* email text: **mailText**: enter an arbityry text(Please pay attention on the following object:)
+* email signature: **mailSignature**: arbitary email signature (Thanks for choosing our team The Team Name)
+* telemetry container: **containerTelemetry**: enter container name created in Step 5
+* telemetry file: **fileTelemetry**: enter filename for telemetry data (for example telemtry.json)
+* set file name device logs: **fileNameDeviceLogs**: enter filename for telemetry data (for example /logs.txt)
+* telemetry CSV: **fileTelemetryCSV**: enter filename for telemetry data (for example telemtry.csv)
+* initial password: **initialAdminPassword**: enter an arbittary password for intial user (for example 46ag52c8z9)
 
 
 
