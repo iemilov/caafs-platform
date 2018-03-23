@@ -35,6 +35,8 @@ Every user is free to extend and make suggestions how to improve the application
 9. **Telemtry** - filter data per object/device/sensor, get data in CSV format for further analytics
 
 ## Architecture Overview
+
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/GoIoTnew.jpg" style=" width:100px ; height:100px " />
  
 ## Getting Started
  
