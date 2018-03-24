@@ -86,7 +86,7 @@ Step by step description to deploy and configure the required resources
 2. Clone the repository on your local machine
 
 ```
-git clone https://github.com/iemilov/GoIoT-Platform-Playground.git
+git clone https://github.com/iemilov/Caarth-Platform-Playground.git
 ```
 
 3. Install the required node modules:
@@ -94,8 +94,7 @@ git clone https://github.com/iemilov/GoIoT-Platform-Playground.git
 ```
 npm install
 ```
-4. Change the configuration parameters in config.js: https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/api/config.js
-
+4. Change the configuration parameters in [config.js](https://github.com/iemilov/Caarth-Platform-Playground/blob/master/api/config.js)
 Copy the whole content from config.js and store it separtely as backup. You will need it in this state for the final cloud deployment. But in order to start the application locally you should replace everywhere the "process.env" part with the real parameters created in the configuratioon steps. For example:
 
 ```
