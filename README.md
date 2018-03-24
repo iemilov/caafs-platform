@@ -25,7 +25,7 @@ Table of contents
       * [Prerequisites](#prerequisites)
       * [Deploying and Configuration](#deploying-and-configuration)
       * [Run the application locally](#run-the-application-locally)
-      * [Run the application on Azure](#run the-application-on-azure)
+      * [Run the application on Azure](#run-the-application-on-azure)
    * [Running the tests](#running-the-tests)
    * [Usage](#usage)
    * [Contributing](#contributing)
@@ -76,7 +76,7 @@ Once you got your azure free account, you can start deploying and configuring th
 
 **Note**: before starting keep in mind that you should create all resources in the same geographical region in order to save outband costs and to use the bandwith as effective as possible!
 
-#### 1. Create resource group:
+#### 1. Create Resource Group:
 A resource group is a container for all your resources which are to be deployed in the furthere steps:
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal#create-resource-group
 
