@@ -20,20 +20,21 @@ Table of contents
 
 <!--ts-->
    * [Features Overview](#features-overview)
-   * [Architecture Overview](#Architecture Overview)
-   * [Getting Started](#Getting Started)
-      * [Prerequisites](#Prerequisites)
-      * [Deploying and Configuration](#Deploying and Configuration)
-      * [Run the application locally](#Run the application locally)
-      * [Run the application on Azure](#Run the application on Azure)
-   * [Running the tests](#Running the tests)
-   * [Usage](#Usage)
-   * [Authors](#Authors)
-   * [License](#License)   
+   * [Architecture Overview](#architecture-overview)
+   * [Getting Started](#getting-started)
+      * [Prerequisites](#prerequisites)
+      * [Deploying and Configuration](#deploying-and-configuration)
+      * [Run the application locally](#run-the-application-locally)
+      * [Run the application on Azure](#run the-application-on-azure)
+   * [Running the tests](#running-the-tests)
+   * [Usage](#usage)
+   * [Contributing](#contributing)
+   * [Authors](#authors)
+   * [License](#license)   
 <!--te-->
 
-Features Overview
-=================
+## Features Overview
+
 
 1. **User Management**:
    - Authentication and Jwt token based authorization with Swagger and Node.js for users stored in Mongo DB databse
@@ -324,8 +325,8 @@ Explain what these tests test and why
 ```
 Give an example
 ```
-Usage
-========
+## Usage
+
 
 ## Contributing
  
