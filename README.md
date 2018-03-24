@@ -1,6 +1,5 @@
 # Caarth - playground for building IoT solutions with Microsoft Azure
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/IEmilov)
-[![Version 1.0.0]()]
+
 > *Copyright 2018 [Ivan Emilov]*
 
 **C.a.a.r.t.h** (Care and Alarms Rules Temperature Humidity) is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
@@ -187,14 +186,6 @@ Give an example
 
 
 ## Contributing
-
-**This application was initially developed for non-commerical purposes. For commerical usage, or if you like my work, please consider [supporting me](https://www.paypal.me/IEmilov) for developing and maintaining this application.**
-
-<p align="center">
-  <a href="https://www.paypal.me/IEmilov">
-    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
-  </a>
-</p>
  
 Please read [CONTRIBUTING.md](#contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
  
