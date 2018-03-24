@@ -1,6 +1,6 @@
 # Caarth - playground for building IoT solutions with Microsoft Azure
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/IEmilov)
-> *Copyright 2018 [Ivan Emilov](http://deanattali.com)*
+> *Copyright 2018 [Ivan Emilov]*
 
 **C.a.a.r.t.h** (Care and Alarms Rules Temperature Humidity) is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
 With this application you get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution. You are free configure parameters like database name, collections names, passwords,connection strings and etc. and there is no need to touch the code. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application (written on Node.js) developed to communicate with this platform.
@@ -17,14 +17,6 @@ Please feel free to extend and make suggestions how to improve the application. 
 3. The application uses the famous Express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own User Interface.
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
 
-
-**This theme was developed for non-commerical purposes. For commerical usage, or if you enjoy this theme, please consider [supporting me](https://www.paypal.me/IEmilov) for developing and maintaining this template.**
-
-<p align="center">
-  <a href="https://www.paypal.me/daattali">
-    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
-  </a>
-</p>
 
 Table of contents
 =================
@@ -194,6 +186,14 @@ Give an example
 
 
 ## Contributing
+
+**This application was initially developed for non-commerical purposes. For commerical usage, or if you enjoy this theme, please consider [supporting me](https://www.paypal.me/IEmilov) for developing and maintaining this template.**
+
+<p align="center">
+  <a href="https://www.paypal.me/IEmilov">
+    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
+  </a>
+</p>
  
 Please read [CONTRIBUTING.md](#contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
  
