@@ -57,7 +57,6 @@ Table of contents
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/architecture.png" style=" width:100px ; height:100px " />
  
 ## Getting Started
-==================
  
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Before starting, the following azure resources should be deployed and configured:
  
@@ -72,12 +71,12 @@ These instructions will get you a copy of the project up and running on your loc
  
 ### Deploying and Configuration
 
-* [Create Resource Group](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-resource-group)
-* [Create and Configure Storage Account ](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-storage-account)
-* [Create and Configure Azure IoT Hub](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-iot-hub)
-* [Create and Configure Azure Cosmos DB](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-cosmos-db)
-* [Create and Configure Azure Sendgrid](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-sendgrid)
-* [Create and Configure Azure API App](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-api-app)
+1. [Create Resource Group](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-resource-group)
+2. [Create and Configure Storage Account ](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-storage-account)
+3. [Create and Configure Azure IoT Hub](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-iot-hub)
+4. [Create and Configure Azure Cosmos DB](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-cosmos-db)
+5. [Create and Configure Azure Sendgrid](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-sendgrid)
+6. [Create and Configure Azure API App](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-api-app)
 
 ### Run the application locally
 
