@@ -82,7 +82,7 @@ Step by step description to deploy and configure the required resources
 
 ### Run the application locally
 
-1. Install node js on your local machine: https://nodejs.org/en/download/
+1. Install Node.js on your local machine: https://nodejs.org/en/download/
 2. Clone the repository on your local machine
 
 ```
@@ -94,28 +94,29 @@ git clone https://github.com/iemilov/Caarth-Platform-Playground.git
 ```
 npm install
 ```
-4. Change the configuration parameters in [config.js](https://github.com/iemilov/Caarth-Platform-Playground/blob/master/api/config.js)
-Copy the whole content from config.js and store it separtely as backup. You will need it in this state for the final cloud deployment. But in order to start the application locally you should replace everywhere the "process.env" part with the real parameters created in the configuratioon steps. For example:
+4. **Change the configuration parameters in [config.js](https://github.com/iemilov/Caarth-Platform-Playground/blob/master/api/config.js)**
+
+Copy the whole content from config.js and store it separtely as backup. You will need it in this state for the final cloud deployment. But in order to start the application locally you should replace everywhere the "process.env" part with the real parameters created in the [configuratioon steps](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-storage-account). For example:
 
 ```
 replace config.connectionString = process.env['endpointIoTHuB'] WITH config.connectionString = 'conn string from Step 9'
 ```
 
-5. Start the application:
+5. **Start the application**:
  
 ```
 npm start
 ```
 
-If you have done everything correct, you should be able to access the API app on:
+   If you have done everything correct, you should be able to access the API app on:
 
 ```
 localhost:8001/docs
 ```
 
-6. Test the application:
-
-After the initial deployment an admin username "admin@mail.com" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser ogo to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box:
+6. **Test the application**:
+ 
+   After the initial deployment an admin username "admin@mail.com" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser ogo to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box:
 
 ```
 {
