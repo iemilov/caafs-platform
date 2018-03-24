@@ -18,7 +18,7 @@ Please feel free to extend and make suggestions how to improve the application. 
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
 
 
-**This theme was developed for non-commerical purposes. For commerical usage, or if you enjoy this theme, please consider [supporting me](https://www.paypal.me/daattali/20) for developing and maintaining this template.**
+**This theme was developed for non-commerical purposes. For commerical usage, or if you enjoy this theme, please consider [supporting me](https://www.paypal.me/IEmilov) for developing and maintaining this template.**
 
 <p align="center">
   <a href="https://www.paypal.me/daattali">
