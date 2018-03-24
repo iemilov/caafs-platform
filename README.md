@@ -187,7 +187,7 @@ Give an example
 
 ## Contributing
 
-**This application was initially developed for non-commerical purposes. For commerical usage, or if you enjoy this theme, please consider [supporting me](https://www.paypal.me/IEmilov) for developing and maintaining this template.**
+**This application was initially developed for non-commerical purposes. For commerical usage, or if you like my work, please consider [supporting me](https://www.paypal.me/IEmilov) for developing and maintaining this application.**
 
 <p align="center">
   <a href="https://www.paypal.me/IEmilov">
