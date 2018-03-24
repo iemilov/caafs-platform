@@ -32,7 +32,8 @@ Table of contents
    * [License](#License)   
 <!--te-->
 
-## Features Overview
+Features Overview
+=================
 
 1. **User Management**:
    - Authentication and Jwt token based authorization with Swagger and Node.js for users stored in Mongo DB databse
