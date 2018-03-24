@@ -1,17 +1,17 @@
-# GoIoT - playground for building IoT solutions with Microsoft Azure
+# Caarth - playground for building IoT solutions with Microsoft Azure
 
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
-GoIoT is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
-With this application you get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution. You are free configure parameters like database name, collections names, passwords,connection strings and etc. and there is no need to touch the code. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) device client application (written on Node.js) developed to communicate with this platform.
+Caarth is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
+With this application you get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution. You are free configure parameters like database name, collections names, passwords,connection strings and etc. and there is no need to touch the code. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application (written on Node.js) developed to communicate with this platform.
  
 Please feel free to extend and make suggestions how to improve the application. If you find any bugs, do not hesitate to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
 **Note**: After deploying and configuring the application you will get a similar result as the microsoft preconfigured solution announced here: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet, but with several differences:
  
 1. In this case you won't get the environment ready with one mouse click, rather you will be able to deploy and configure the components on your own with the description provided here. You will get a very good impression which components are deployed and how to reconfigure them. The user will be free to choose even the free tier of every component as long it is possible for this resource.
-2. This application is completly based on node js - easy to understand and extend even for user with modest programming background
-3. The application uses the famous express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own user interface.
+2. This application is completly based on Node.js - easy to understand and extend even for user with modest programming background
+3. The application uses the famous Express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own User Interface.
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
 
 
