@@ -19,18 +19,18 @@ Table of contents
 =================
 
 <!--ts-->
-   * [gh-md-toc](#gh-md-toc)
-   * [Table of contents](#table-of-contents)
-   * [Installation](#installation)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
+   * [Features Overview](#Features Overview)
+   * [Architecture Overview](#Architecture Overview)
+   * [Getting Started](#Getting Started)
+      * [Prerequisites](#Prerequisites)
+      * [Deploying and Configuration](#Deploying and Configuration)
+      * [Run the application locally](#Run the application locally)
+      * [Run the application on Azure](#Run the application on Azure)
+   * [Running the tests](### Running the tests)
+   * [Usage](#Usage)
+   * [Authors](#Authors)
+   * [License](#License)
+   
 <!--te-->
 
 ## Features Overview
@@ -340,11 +340,6 @@ See also the list of [contributors](https://github.com/your/project/contributors
  
 ## License
  
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
- 
-## Acknowledgments
- 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details
+
  
