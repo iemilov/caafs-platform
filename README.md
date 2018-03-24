@@ -26,11 +26,10 @@ Table of contents
       * [Deploying and Configuration](#Deploying and Configuration)
       * [Run the application locally](#Run the application locally)
       * [Run the application on Azure](#Run the application on Azure)
-   * [Running the tests](### Running the tests)
+   * [Running the tests](#Running the tests)
    * [Usage](#Usage)
    * [Authors](#Authors)
-   * [License](#License)
-   
+   * [License](#License)   
 <!--te-->
 
 ## Features Overview
