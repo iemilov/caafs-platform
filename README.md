@@ -14,6 +14,8 @@ Please feel free to extend and make suggestions how to improve the application. 
 3. The application uses the famous Express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own User Interface.
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
+
 
 Table of contents
 =================
