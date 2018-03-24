@@ -1,4 +1,6 @@
 # Caarth - playground for building IoT solutions with Microsoft Azure
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
+> *Copyright 2018 [Ivan Emilov](http://deanattali.com)*
 
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
@@ -14,8 +16,14 @@ Please feel free to extend and make suggestions how to improve the application. 
 3. The application uses the famous Express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own User Interface.
 4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
 
+**This theme was developed for non-commerical purposes. For commerical usage, or if you enjoy this theme, please consider [supporting me](https://www.paypal.me/daattali/20) for developing and maintaining this template.**
+
+<p align="center">
+  <a href="https://www.paypal.me/daattali">
+    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
+  </a>
+</p>
 
 Table of contents
 =================
