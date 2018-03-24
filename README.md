@@ -1,11 +1,12 @@
 # Caarth - playground for building IoT solutions with Microsoft Azure
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/is.emilov/20)
 > *Copyright 2018 [Ivan Emilov](http://deanattali.com)*
-
-<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
 **C.a.a.r.t.h** (Care and Alarms Rules Temperature Humidity) is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
 With this application you get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution. You are free configure parameters like database name, collections names, passwords,connection strings and etc. and there is no need to touch the code. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application (written on Node.js) developed to communicate with this platform.
+
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
+
  
 Please feel free to extend and make suggestions how to improve the application. If you find any bugs, do not hesitate to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
