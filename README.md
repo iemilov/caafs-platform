@@ -19,7 +19,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Features Overview](#eatures overview)
+   * [Features Overview](Features Overview)
    * [Architecture Overview](#Architecture Overview)
    * [Getting Started](#Getting Started)
       * [Prerequisites](#Prerequisites)
