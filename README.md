@@ -1,5 +1,6 @@
 # Caarth - playground for building IoT solutions with Microsoft Azure
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/IEmilov)
+[![Version 1.0.0]()]
 > *Copyright 2018 [Ivan Emilov]*
 
 **C.a.a.r.t.h** (Care and Alarms Rules Temperature Humidity) is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
