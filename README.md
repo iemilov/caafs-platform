@@ -116,7 +116,7 @@ localhost:8001/docs
 
 6. **Test the application**:
  
-   After the initial deployment an admin username "admin@mail.com" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser ogo to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box:
+After the initial deployment an admin username "admin@mail.com" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser ogo to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box:
 
 ```
 {
@@ -143,9 +143,9 @@ From now you can start using the other APIs by using the Authorization paramter 
 
 ### Run the application on Azure
 
-1. Bring the config.js in the initial state with all "process.env" parameters
+1. **Bring the config.js in the initial state with all "process.env" parameters**
 
-2. Deploy the code to the local git created in Step 14 from the configuration steps
+2. **Deploy the code to the local git created in Step 14 from the configuration steps**
 
 ```
 git remote add apiapp <Git clone URL from Step 14>
@@ -159,9 +159,9 @@ The first deployment can take sevral minutes. Once the deployment is finished yo
 ```
 http(s)://NAMEOFYOURAPIAPP.azurewebsites.net/docs/
 ```
-3. Login through the http://goiotapi.azurewebsites.net/api/login with the initial username and password
+3. **Login through the http://NAMEOFYOURAPIAPP.azurewebsites.net/api/login with the initial username and password**
 
-4. Get the token and start using the other APIs as described "Run the application locally"
+4. **Get the token and start using the other APIs as in [Run the application locally](#run-the-application-locally)**
 
 **Note**: If you test the APIs on the Browser please be sure that you load the main url only with http// and not htpps// since you do not have the htpps certifactes on your local machine
 
