@@ -2,12 +2,10 @@
 
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
-GoIoT is a scalable web application for everyone who loves node js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
-With this application you will be able to get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution.
-It is up to you to choose the main configurations for the application like database name, collections names, passwords, connection strings and etc. and it can be configured without touching the code of the application.
-Additionally there is a complete free suitable device client application developed to communicate with this platform and is also written in node js.
+GoIoT is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
+With this application you get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution. You are free configure parameters like database name, collections names, passwords,connection strings and etc. and there is no need to touch the code. Additionally there is a complete free suitable [DeviceClient](#https://github.com/iemilov/GoIoT-Device-Client) device client application (written on Node.js) developed to communicate with this platform.
  
-Every user is free to extend and make suggestions how to improve the application. If you find any bugs, feel free to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
+Please feel free to extend and make suggestions how to improve the application. If you find any bugs, do not hesitate to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
 **Note**: After deploying and configuring the application you will get a similar result as the microsoft preconfigured solution announced here: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet, but with several differences:
  
