@@ -69,7 +69,7 @@ These instructions will get you a copy of the project up and running on your loc
 * SendGrid Account
 * Azure WebAPI with App Service plan
  
-### Deploying and Configuration
+### Deploy and Configure the required Cloud Resources
 
 1. [Create Resource Group](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-resource-group)
 2. [Create and Configure Storage Account ](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-storage-account)
