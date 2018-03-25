@@ -101,9 +101,8 @@ npm install
 
 Copy the whole content from config.js and store it separtely as backup. You will need it in this state for the final cloud deployment. But in order to start the application locally you should replace everywhere the "process.env" part with the real parameters created in the [configuratioon steps](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-storage-account). For example:
 
-```
-replace config.connectionString = process.env['endpointIoTHuB'] WITH config.connectionString = connection string from [Step 9](https://github.com/iemilov/Caarth-Platform-Playground/wiki#step-9-store-connection-string-for-iot-hub)
-```
+REAPLACE config.connectionString = process.env['endpointIoTHuB'] WITH config.connectionString = connection string from [Step 9](https://github.com/iemilov/Caarth-Platform-Playground/wiki#step-9-store-connection-string-for-iot-hub)
+
 
 5. **Start the application**:
  
