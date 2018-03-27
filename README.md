@@ -1,21 +1,37 @@
-# Caarth - playground for building IoT solutions with Microsoft Azure
+# Caafs - playground for building IoT solutions with Microsoft Azure
 
 > *Copyright 2018 [Ivan Emilov]*
 
-**C.a.a.r.t.h** (Care and Alarms Rules Temperature Humidity) is a scalable web application for everyone who loves Node.js and is interested in learning Internet of Things, building demos, prototypes, showcases or just wants to try out quickly some use cases.
-With this application you get a complete ready environment hosted in Microsoft Azure with the main functionalities which are major part of almost every solution. You are free configure parameters like database name, collections names, passwords,connection strings and etc. and there is no need to touch the code. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application (written on Node.js) developed to communicate with this platform.
+**C.a.a.f.s** (Care and Alarms facility systems) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With C.a.a.f.s, you are able to:
+
+* Provision and control devices/objects.
+* Get simple statistic.
+* Provision and control users.
+* Collect and data from devices/objects.
+* Set Rules and trigger alarms.
+* Send Notifcations based on the rules.
+
+Suitable for the following real life use cases:
+* Control facility systems based on threshold monitoring of sensor values
+* Trend analysis based on automation triggers
+* Notification of temperature irregularities for food services, technical equipment or pharmacy products (like vaccines)
+* Notification of humidity irregularities for plant industry
+
+This web application is also apprpriate for everyone who loves Node.js, is interested in learning Internet of Things and wants to get familiar with Microsoft Azure. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application developed for this platform.
 
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
  
 Please feel free to extend and make suggestions how to improve the application. If you find any bugs, do not hesitate to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
-**Note**: After deploying and configuring the application you will get a similar result as the microsoft preconfigured solution announced here: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet, but with several differences:
- 
-1. In this case you won't get the environment ready with one mouse click, rather you will be able to deploy and configure the components on your own with the description provided here. You will get a very good impression which components are deployed and how to reconfigure them. The user will be free to choose even the free tier of every component as long it is possible for this resource.
-2. This application is completly based on Node.js - easy to understand and extend even for user with modest programming background
-3. The application uses the famous Express framework for exposing the APIs. You will be free to decide how to use those APIs and maybe create your own User Interface.
-4. Currently not recommended for productive environments because of the fact that no tests like penetration or last tests are executed against the application.
+**Note**:  Currently not recommended for productive environments due to the fact that no tests like penetration or last tests are executed. Additional facts:
+
+1. **based** on PaaS services
+2. **easy** to configure and administrate without touching the code
+3. **scalable** on demand
+4. **easy** to extent for commercial use for everyone who is familiar with Node.js
+5. **open**, every feature has its API based on Express framework
+
 
 
 Table of contents
@@ -38,22 +54,7 @@ Table of contents
 
 ## Features Overview
 
-
-1. **User Management**:
-   - Authentication and Jwt token based authorization with Swagger and Node.js for users stored in Mongo DB databse
-   - Distinguish between admin and user roles for accessing the protected resources
-2. **Create devices/objects/sensors**
-3. **Device Management**: reboot, firmwareUpdate, setNewInterval, uploadLogs, monitor, get metadata, get/create endnpoint, get command progress, execute waiting command. All those methods can be understood and executed by the device client application, which can be downloaded here: https://github.com/iemilov/GoIoT-Device-Client
-4. **Set rules** - currently the following rules are implmeneted:
-   - set threshold value for a particular object/device/sensor relation
-   - set range - trigger rule if the sensor value get outside this range
-   - track connection status - trigger rule if device get disconnected
-   - store telemetry - choose to store only sensor data based on predifend conditions (delta values)
-5. **Send email notifications using sendgrid** - https://sendgrid.com/
-6. **Store alarms**
-7. **Download Activity Logs**
-8. **View statistic** -  number of connected device/objects, storem active/resolved alarms, sent notifications
-9. **Telemtry** - filter data per object/device/sensor, get data in CSV format for further analytics
+all details about the application features can be found [here](https://github.com/iemilov/Caarth-Platform-Playground/wiki/Usage#features-overview)
 
 ## Architecture Overview
 
@@ -85,14 +86,14 @@ Step by step description to deploy and configure the required resources
 
 ### Run the application locally
 
-1. Install Node.js on your local machine: https://nodejs.org/en/download/
-2. Clone the repository on your local machine
+1. **Install Node.js on your local machine: https://nodejs.org/en/download/**
+2. **Clone the repository on your local machine**
 
 ```
 git clone https://github.com/iemilov/Caarth-Platform-Playground.git
 ```
 
-3. Install the required node modules:
+3. **Install the required node modules**:
  
 ```
 npm install
@@ -118,12 +119,12 @@ localhost:8001/docs
 
 6. **Test the application**:
  
-After the initial deployment an admin username "admin@mail.com" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser ogo to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box:
+After the initial deployment an admin username "**admin@mail.com**" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser go to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box: use the **initialAdminPassword** created in [step 13](https://github.com/iemilov/Caarth-Platform-Playground/wiki#step-13-configure-application-parameters)
 
 ```
 {
   "username": "admin@mail.com",
-  "password": "intial password from Step 13 for the application settings and config.js"
+  "password": "intial password"
 }
 ```
 
@@ -139,7 +140,7 @@ From now you can start using the other APIs by using the Authorization paramter 
 
 ```
 {
-        Authorization: Bearer token you get form the Authentication request
+        Authorization: Bearer <token you got from the Authentication request>
 }
 ```
 
@@ -147,7 +148,7 @@ From now you can start using the other APIs by using the Authorization paramter 
 
 1. **Bring the config.js in the initial state with all "process.env" parameters**
 
-2. **Deploy the code to the local git created in Step 14 from the configuration steps**
+2. **Deploy the code to the local git created [in Step 14](https://github.com/iemilov/Caarth-Platform-Playground/wiki#step-14-create-local-git-for-the-azure-api-app) from the configuration steps**
 
 ```
 git remote add apiapp <Git clone URL from Step 14>
