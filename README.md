@@ -18,16 +18,13 @@ Suitable for the following real life use cases:
 * Notification of humidity irregularities for plant industry
 
 This web application is also apprpriate for everyone who loves Node.js, is interested in learning Internet of Things and wants to get familiar with Microsoft Azure. Additionally there is a complete free suitable [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application developed for this platform.
-
-<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
-
  
 Please feel free to extend and make suggestions how to improve the application. If you find any bugs, do not hesitate to submit the issues: https://github.com/iemilov/GoIoT-Platform-Playground/issues
 
 **Note**:  Currently not recommended for productive environments due to the fact that no tests like penetration or last tests are executed. Additional facts:
 
 1. **based** on PaaS services
-2. **easy** to configure and administrate without touching the code
+2. **easy** to configure and administrate without touching the code [step by step description](https://github.com/iemilov/Caarth-Platform-Playground/wiki/Deploying-and-Configuration)
 3. **scalable** on demand
 4. **easy** to extent for commercial use for everyone who is familiar with Node.js
 5. **open**, every feature has its API based on Express framework
@@ -116,6 +113,8 @@ npm start
 ```
 localhost:8001/docs
 ```
+
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
 6. **Test the application**:
  
