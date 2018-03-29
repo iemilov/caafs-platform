@@ -61,7 +61,7 @@ function ExecuteAction(actions, alarmobject, mailReceiver) {
     if (actions.notifyMail && alarmobject.status === 'active') {
         let message = config.template + ' occured. ' + config.text + 'object: ' + alarmobject.objectid + "<br>" + 'device: '  + alarmobject.alarmid + "<br>" + 'triggredRule: ' + alarmobject.name + "<br>"
         + 'event: ' + alarmobject.event + "<br>" + 'reference: ' + alarmobject.reference + "<br>" + 'status: ' + alarmobject.status + "<br><br>" +
-        'Time: ' + config.time + "<br><br>" + config.signature
+        'Time: ' + new Date() + "<br><br>" + config.signature
         mailOptions.subject = config.subject + '🔥'
         runThroughMails (message, mailReceiver, alarmobject )
     }
@@ -69,7 +69,7 @@ function ExecuteAction(actions, alarmobject, mailReceiver) {
     if (actions.notifyMail && alarmobject.status === 'resolved') {
         let message = config.template + ' resolved. ' + config.text + 'object: ' + alarmobject.objectid + "<br>" + 'device: '  + alarmobject.alarmid + "<br>" + 'triggeredRule: ' + alarmobject.name + "<br>"
         + 'event: ' + alarmobject.event + "<br>" + 'reference: ' + alarmobject.reference + "<br>" + 'status: ' + alarmobject.status + "<br>" + "<br>" + 
-        'Time: ' + config.time + "<br><br>" + config.signature
+        'Time: ' + new Date() + "<br><br>" + config.signature
         mailOptions.subject = config.subject + '✅'
         runThroughMails (message, mailReceiver, alarmobject )
     }

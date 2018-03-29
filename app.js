@@ -6,6 +6,7 @@ const socketIo = require("socket.io")
 const port = process.env.PORT || 8001
 const app = express()
 const server = http.createServer(app);
+
 const io = socketIo(server)
 
 const swaggerTools = require("swagger-tools")
@@ -17,12 +18,27 @@ const logservice = require("./api/helpers/logs")
 // start the listener for live data
 const listener = require("./api/livedata/listener")
 
+// Add headers to allow access from different web user interfaces
+app.use(function (req, res, next) {
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  // Pass to next layer of middleware
+  next();
+})
+
 swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
   //Serves the Swagger UI on /docs
   //app.use(middleware.swaggerMetadata()); // needs to go BEFORE swaggerSecurity
   app.use(middleware.swaggerMetadata()); // needs to go BEFORE swaggerSecurity
   app.use(middleware.swaggerValidator())
-
+  
   app.use(
     middleware.swaggerSecurity({
       //manage token function in the 'auth' module
