@@ -6,9 +6,7 @@ const socketIo = require("socket.io")
 const port = process.env.PORT || 8001
 const app = express()
 const server = http.createServer(app);
-
 const io = socketIo(server)
-
 const swaggerTools = require("swagger-tools")
 const YAML = require("yamljs")
 const auth = require("./api/helpers/auth")
