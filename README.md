@@ -7,7 +7,8 @@
 * Provision and control devices/objects.
 * Get simple statistic about devices/objects.
 * Provision and control users.
-* Collect and data from devices/objects.
+* Collect data from devices/objects.
+* Consume live data from devices/objects.
 * Set Rules and trigger alarms.
 * Send Notifcations based on the rules.
 
