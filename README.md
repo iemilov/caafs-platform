@@ -180,13 +180,14 @@ Currently no automated tests are implemented! It is on the project roadmap.
 
 * [Connect real device to the platform](https://github.com/iemilov/caafs-platform/wiki/Manage-Devices)
 * [Device Management](https://github.com/iemilov/caafs-platform/wiki/Device-Management)
-* Manage Users
-* Manage Devices
-* Manage Rules
-* Manage Alarms
-* Manage Telemetry data
-* Get Activity Logs
-* Get Statisctic
+* [Authenticate and authorize](https://github.com/iemilov/caafs-platform/wiki/Authentication-&-Authorization)
+* [Manage Rules](https://github.com/iemilov/caafs-platform/wiki/Manage-Rules)
+* [Manage Alarms](https://github.com/iemilov/caafs-platform/wiki/Manage-Alarms)
+* [Manage telemetry data](https://github.com/iemilov/caafs-platform/wiki/Manage-Telemetry-data)
+* [Get activity logs](https://github.com/iemilov/caafs-platform/wiki/Activity-Logs)
+* [Get Statisctic](https://github.com/iemilov/caafs-platform/wiki/Statisctic-API)
+* [Connect web client to consume live data](https://github.com/iemilov/caafs-platform/wiki/Connect-web-client)
+
 
 ## Contributing
  
