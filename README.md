@@ -178,8 +178,8 @@ Currently no automated tests are implemented! It is on the project roadmap.
  
 ## Usage
 
-* Connect real device to the platform
-* Device Management
+* [Connect real device to the platform](https://github.com/iemilov/caafs-platform/wiki/Manage-Devices)
+* [Device Management](https://github.com/iemilov/caafs-platform/wiki/Device-Management)
 * Manage Users
 * Manage Devices
 * Manage Rules

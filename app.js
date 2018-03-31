@@ -3,10 +3,12 @@
 const express = require("express");
 const http = require("http")
 const socketIo = require("socket.io")
-const port = process.env.PORT || 8001
+const port = process.env.PORT || 3000
 const app = express()
 const server = http.createServer(app);
+
 const io = socketIo(server)
+
 const swaggerTools = require("swagger-tools")
 const YAML = require("yamljs")
 const auth = require("./api/helpers/auth")
@@ -19,7 +21,7 @@ const listener = require("./api/livedata/listener")
 // Add headers to allow access from different web user interfaces
 app.use(function (req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'http://yourClientWebUI');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   // Request headers you wish to allow
@@ -52,10 +54,13 @@ swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
   app.use(middleware.swaggerRouter(routerConfig))
 
   app.use(middleware.swaggerUi())
-
+  
+  //io.set('transports', ['websocket']);
+    
   // accept socket connections form remote web clients (for example web user interface)
   // the remote web client shall be authorized based on the token in the header
   io.on("connection", socket => {
+    io.set('transports', ['websocket']);
     auth.TokenValidationWebClients(socket.handshake.query.token,  (response) => {
       if (response){
         console.log("New web client connected"),
@@ -67,8 +72,8 @@ swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
         )
       }
       else {
-        logservice.logger.error("Access Denied. You are not authorized to access this resource")
-        console.log("Access Denied. You are not authorized to access this resource")
+        logservice.logger.error("Access Denied. An unauthorized web client is trying to access live data")
+        console.log("Access Denied. An unauthorized web client is trying to access live data")
       }
     }) 
   })
@@ -78,7 +83,7 @@ swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
       //Subscribe for events from the IoTHUB
       listener.livedata.on('IothubEvents', (data) => {
         console.log(JSON.stringify(data))
-        socket.emit("sim", data.temperature)
+        socket.emit("sim", JSON.stringify(data))
       })
     }
     catch (error) {
@@ -92,5 +97,3 @@ swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
     logservice.logger.info("Started server on port: " + port)
   })
 })
-
-
