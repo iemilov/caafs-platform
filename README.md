@@ -14,7 +14,7 @@
 
 > More details about the application features can be found [here](https://github.com/iemilov/caafs-platform/wiki/Usage#features-overview).
 
-**Applicable** for almost every industry but rather suitable and **ready for use** for the following real life use cases:
+**Applicable** for almost every industry but rather suitable and **ready to use** for the following real life use cases:
 * Control facility systems based on threshold monitoring of sensor values
 * Trend analysis based on automation triggers
 * Notification of temperature irregularities for food services, technical equipment or pharmacy products (like vaccines)
