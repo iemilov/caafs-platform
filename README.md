@@ -1,5 +1,5 @@
 # Caafs - playground for building IoT solutions with Microsoft Azure
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/IEmilov)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/IEmilov)
 > *Copyright 2018 [Ivan Emilov]*
 
 **C.a.a.f.s** (**Care and Alarms facility systems**) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With **C.a.a.f.s**, you are able to:
@@ -201,11 +201,10 @@ Please read [CONTRIBUTING.md](https://github.com/iemilov/caafs-platform/blob/mas
 
 **If you like my work, please consider [supporting me](https://www.paypal.me/IEmilov) for maintaining and developing this application.**
 
-<p align="center">
+
   <a href="https://www.paypal.me/IEmilov">
     <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
   </a>
-</p>
 
  
 ## Authors
