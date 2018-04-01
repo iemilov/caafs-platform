@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
-  version: "0.0.2"
-  title: GoIoT
-  description: A GoIoT API based on Swagger
+  version: "0.0.3"
+  title: Caafs
+  description: Care and alarms facility systems API
 basePath: /api
 schemes:
   - http

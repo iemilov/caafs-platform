@@ -18,7 +18,7 @@
 * Control facility systems based on threshold monitoring of sensor values
 * Trend analysis based on automation triggers
 * Notification of temperature irregularities for food services, technical equipment or pharmacy products (like vaccines)
-* Notification of humidity irregularities for plant industry
+* Notification of humidity irregularities in the plant industry
 
 This web application is also apprpriate for everyone who loves Node.js, is interested in learning Internet of Things and wants to get familiar with Microsoft Azure. Additionally there is a complete free [DeviceClient](https://github.com/iemilov/GoIoT-Device-Client) application developed for this platform.
  
