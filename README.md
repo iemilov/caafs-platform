@@ -2,6 +2,8 @@
 
 > *Copyright 2018 [Ivan Emilov]*
 
+<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/caafs.png" style=" width:100px ; height:100px " />
+
 **C.a.a.f.s** (**Care and Alarms facility systems**) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With **C.a.a.f.s**, you are able to:
 
 * Provision and control devices/objects.

@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   version: "0.0.3"
   title: Caafs
-  description: Care and alarms facility systems API
+  description: Care and alarms facility systems REST API
 basePath: /api
 schemes:
   - http
