@@ -1,5 +1,5 @@
 # Caafs - playground for building IoT solutions with Microsoft Azure
-
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/IEmilov)
 > *Copyright 2018 [Ivan Emilov]*
 
 **C.a.a.f.s** (**Care and Alarms facility systems**) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With **C.a.a.f.s**, you are able to:
@@ -12,11 +12,12 @@
 * Set Rules and trigger alarms.
 * Send Notifcations based on the rules.
 
-> More details about the application features can be found [here](https://github.com/iemilov/caafs-platform/wiki/Usage#features-overview).
-
 <p align="center">
         <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/caafs.png" style=" width:100px ;      height:100px " />
 </p>
+
+
+> More details about the application features can be found [here](https://github.com/iemilov/caafs-platform/wiki/Usage#features-overview).
 
 **Applicable** for almost every industry but rather suitable and **ready to use** for the following real life use cases:
 * Control facility systems based on threshold monitoring of sensor values
@@ -197,6 +198,15 @@ Currently no automated tests are implemented! It is on the project roadmap.
 ## Contributing
  
 Please read [CONTRIBUTING.md](https://github.com/iemilov/caafs-platform/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+**If you like my work, please consider [supporting me](https://www.paypal.me/IEmilov) for maintaining and developing this application.**
+
+<p align="center">
+  <a href="https://www.paypal.me/IEmilov">
+    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
+  </a>
+</p>
+
  
 ## Authors
  
