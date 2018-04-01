@@ -209,7 +209,8 @@ Please read [CONTRIBUTING.md](https://github.com/iemilov/caafs-platform/blob/mas
  
 ## Authors
  
-* **Ivan Emilov**
+* Ivan Emilov
+* Contact: is.emilov@gmail.com
 
 ## License
  
