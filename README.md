@@ -168,7 +168,7 @@ git push apiapp master:master
 The first deployment can take several minutes. Once the deployment is finished you should be able to see your API app under the following url:
 
 ```
-http(s)://NAMEOFYOURAPIAPP.azurewebsites.net/docs/
+http(s)://NAMEOFYOURAPIAPP.azurewebsites.net/docs
 ```
 
 3. **Login through the http://NAMEOFYOURAPIAPP.azurewebsites.net/api/login with the initial username:**admin@mail.com**  and the **initialAdminPassword** created in [step 13](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#step-14-create-local-git-for-the-azure-api-app)**
