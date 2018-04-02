@@ -97,7 +97,10 @@ exports.getNotifications = function (args, res, next) {
     routeAlarm.getNotifications()
         .then((result) => {
             let l = result.entries.length
-            let notifications = []
+            let obj = {
+                allSentNotifications:l
+            }
+            /*let notifications = []
             for (var i = 0; i < l; i++) {
                 let obj = {
                     allSentNotifications: l,
@@ -106,10 +109,10 @@ exports.getNotifications = function (args, res, next) {
                     sentTime: Object.values(result.entries[i].Timestamp)[1],
                 }
                 notifications.push(obj)
-            }
+            }*/
             logservice.logger.info('Get all notifications operation was successfull')
             // send the statistic object as response
-            return res.send(notifications)
+            return res.send(obj)
         })
         .catch((err) => {
             logservice.logger.error('Get all all notifications failed: ' + err.message)
