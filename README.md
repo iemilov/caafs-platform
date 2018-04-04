@@ -6,11 +6,11 @@
 
 * Provision and control devices/objects.
 * Get simple statistic about devices/objects.
-* Provision and control users.
-* Collect data from devices/objects.
+* Set filter to collect only delta data form devices/objects
 * Consume live sensor data.
 * Set Rules and trigger alarms.
 * Send Notifcations based on the rules.
+* Manage users.
 
 <p align="center">
         <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/caafs.png" style=" width:100px ;      height:100px " />
