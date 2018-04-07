@@ -78,12 +78,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 Step by step description to deploy and configure the required resources
 
-1. [Create Resource Group](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-resource-group)
-2. [Create and Configure Storage Account ](https://github.com/iemilov/Caarth-Platform-Playground/wiki#create-storage-account)
-3. [Create and Configure Azure IoT Hub](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-iot-hub)
-4. [Create and Configure Azure Cosmos DB](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-cosmos-db)
-5. [Create and Configure Azure Sendgrid](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-sendgrid)
-6. [Create and Configure Azure API App](https://github.com/iemilov/Caarth-Platform-Playground/wiki#azure-api-app)
+1. [Create Resource Group](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#create-resource-group)
+2. [Create and Configure Storage Account ](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#create-storage-account)
+3. [Create and Configure Azure IoT Hub](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#azure-iot-hub)
+4. [Create and Configure Azure Cosmos DB](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#azure-cosmos-db)
+5. [Create and Configure Azure Sendgrid](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#azure-sendgrid)
+6. [Create and Configure Azure API App](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#azure-api-app)
 
 ### Run the application locally
 
