@@ -171,7 +171,7 @@ The first deployment can take several minutes. Once the deployment is finished y
 http(s)://NAMEOFYOURAPIAPP.azurewebsites.net/docs
 ```
 
-3. **Login through the http://NAMEOFYOURAPIAPP.azurewebsites.net/api/login with the initial username:**admin@mail.com**  and the **initialAdminPassword** created in [step 13](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#step-14-create-local-git-for-the-azure-api-app)**
+3. **Login through the http://NAMEOFYOURAPIAPP.azurewebsites.net/api/login with the initial username:**admin@mail.com**  and the **initialAdminPassword** created in [step 13](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#step-13-configure-application-parameters)**
 
 4. **Get the token and start using the other APIs as in [Run the application locally](#run-the-application-locally)**
 
