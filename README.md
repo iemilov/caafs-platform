@@ -13,7 +13,7 @@
 * Manage users.
 
 <p align="center">
-        <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/caafs.png" style=" width:100px ;      height:100px " />
+        <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/caafs.jpg" style=" width:100px ;      height:100px " />
 </p>
 
 
