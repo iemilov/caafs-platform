@@ -59,7 +59,8 @@ Table of contents
 
 ## Architecture Overview
 
-<img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/architecture.png" style=" width:100px ; height:100px " />
+![architecture](https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/architecture.png)
+
  
 ## Getting Started
  
