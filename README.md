@@ -59,7 +59,7 @@ Table of contents
 
 ## Architecture Overview
 
-![architecture](https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/architecture.png)
+![Preview](https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/architecture.png)
 
  
 ## Getting Started
@@ -116,14 +116,14 @@ npm start
    If you have done everything correct, you should be able to access the API description on swagger UI on:
 
 ```
-localhost:8001/docs
+localhost:3000/docs
 ```
 
 <img src="https://github.com/iemilov/GoIoT-Platform-Playground/blob/master/images/goiotAPI.png" style=" width:100px ; height:100px " />
 
 6. **Test the application**:
  
-After the initial deployment an admin username "**admin@mail.com**" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser go to http://localhost:8001/docs/#!/Users/loginPost an put the following body in the authentication text box: use the **initialAdminPassword** created in [step 13](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#step-13-configure-application-parameters)
+After the initial deployment an admin username "**admin@mail.com**" is automatic created. In order to use the exposed APIs you will need to get a token first. Make a post request to http://localhost:8001/api/login. You are free to use any tool for testing RESTful APIs. If you want it to test it on the browser go to http://localhost:3000/docs/#!/Users/loginPost an put the following body in the authentication text box: use the **initialAdminPassword** created in [step 13](https://github.com/iemilov/caafs-platform/wiki/Deploying-and-Configuration#step-13-configure-application-parameters)
 
 ```
 {

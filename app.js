@@ -55,35 +55,45 @@ swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
 
   app.use(middleware.swaggerUi())
   
-  //io.set('transports', ['websocket']);
+  let clients = {}
     
   // accept socket connections form remote web clients (for example web user interface)
   // the remote web client shall be authorized based on the token in the header
   io.on("connection", socket => {
     io.set('transports', ['websocket']);
+    clients[socket.id] = socket
+    
     auth.TokenValidationWebClients(socket.handshake.query.token,  (response) => {
       if (response){
-        console.log("New web client connected"),
-        logservice.logger.info("New web client connected")
+        console.log("New web client " + JSON.stringify(socket.handshake.headers.origin)+ " connected"),
+        logservice.logger.info("New web client " + JSON.stringify(socket.handshake.headers.origin)+ " connected")
         //Subscribe for IoTHub events and send them to remote websocket
         SendEvents(socket)
         socket.on("disconnect", () => 
-          logservice.logger.error("Web client disconnected")
+          console.log("Web client " + JSON.stringify(socket.handshake.headers.origin) + " disconnected"),
+          logservice.logger.error("Web client " + JSON.stringify(socket.handshake.headers.origin)+ " disconnected"),
+          delete clients[socket.id],
+          socket.removeAllListeners()
         )
       }
       else {
-        logservice.logger.error("Access Denied. An unauthorized web client is trying to access live data")
-        console.log("Access Denied. An unauthorized web client is trying to access live data")
+        logservice.logger.error("Access Denied. An unauthorized web client " + JSON.stringify(socket.handshake.headers.origin))
+        console.log("Access Denied. An unauthorized web client " + JSON.stringify(socket.handshake.headers.origin) +  " is trying to access live data")
       }
-    }) 
+    })
   })
   
   const SendEvents = async socket => {
     try {
+      listener.livedata.removeAllListeners()
+      console.log("Iot Hub listener are cleared "),
       //Subscribe for events from the IoTHUB
       listener.livedata.on('IothubEvents', (data) => {
-        console.log(JSON.stringify(data))
+        //console.log(JSON.stringify(data))
         socket.emit("sim", JSON.stringify(data))
+        listener.livedata.on("disconnect",function(data){
+          listener.livedata.removeAllListeners()
+        })
       })
     }
     catch (error) {
@@ -97,3 +107,5 @@ swaggerTools.initializeMiddleware(swaggerConfig, (middleware) => {
     logservice.logger.info("Started server on port: " + port)
   })
 })
+
+
