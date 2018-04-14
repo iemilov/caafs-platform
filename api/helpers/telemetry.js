@@ -6,18 +6,12 @@ const fs = require('fs')
 
 const logservice = require("./logs")
 
-const json2csv = require('json2csv').parse
-const fields = ['objectid', 'deviceid', 'sensor', 'value', 'timestamp'];
-const opts = { fields };
+var json2csv = require('promise-simple-json2csv');
 
-//convert data to csv format
-function convertToCSV(data) {
-    try {
-        let csv = json2csv(data, opts)
-        storeTelemtry(csv)
-    } catch (err) {
-        logservice.logger.error(err)
-    }
+var options = {
+    data: [],
+    fields : ['objectid', 'deviceid', 'sensor', 'value', 'timestamp'],
+    header: true
 }
 
 // store telemtry data additionally as csv file
@@ -98,9 +92,11 @@ function getCSV() {
 
 module.exports = {
     readTelemtry,
-    convertToCSV,
     deleteBlob,
     ifBlobExists,
     createBlob,
-    getCSV
+    getCSV,
+    storeTelemtry,
+    json2csv,
+    options
 }

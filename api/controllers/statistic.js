@@ -64,7 +64,7 @@ exports.getstatistic = function (args, res, next) {
 }
 
 
-// get all alarms resolved manually ba technician for example in case of any device replacements
+// get all alarms resolved manually by technician for example in case of any device replacements
 exports.getAllarmReports = function (args, res, next) {
     routeAlarm.GetAlarms()
     .then((result) => {

@@ -9,7 +9,6 @@ let issuer = config.issuer
 // verify token if web client wants to connect via socket.io to the server
 exports.TokenValidationWebClients = function (token, callback) {
   let currentScope = ["user", "admin"]
-
   if (token && token.indexOf("Bearer ") == 0) {
     let tokenString = token.split(" ")[1];
 

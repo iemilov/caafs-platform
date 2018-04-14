@@ -48,7 +48,7 @@ exports.getmetadata = function (args, res, next) {
           return res.send(result.payload)
       })
       .catch((err) => {
-        return res.status(403).send(err.message)
+        return res.status(403).send({erorr:err.message})
       })
 }
 

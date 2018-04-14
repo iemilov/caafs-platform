@@ -94,20 +94,31 @@ exports.getTelemetryDevice = function (args, res, next) {
     })
 }
 
+
 // helper function: read raw telemetry data, convert them to csv file and download them, remove file from express server
 function createCSV(res) {
   route.readTelemtry()
     .then((result) => {
       let modifiedResult = JSON.parse('[' + result.replace(/}{/g, '},{') + ']')
-      route.convertToCSV(modifiedResult)
-      route.getCSV()
-        .then((fileName) => {
-          logservice.logger.info('Download CSV operation executed successfully')
-          res.download(fileName)
-          res.on('finish', function () {
-            logservice.logger.info('The requested file' + fileName + ' was temporary stored on the express server and removed successfull')
-            logservice.removeBlob(fileName)
-          })
+      route.options.data = modifiedResult
+      route.json2csv(route.options)
+        .then((csv) => {
+          route.storeTelemtry(csv)
+            .then(() => {
+              route.getCSV()
+                .then((fileName) => {
+                  logservice.logger.info('Download CSV operation executed successfully')
+                  res.download(fileName)
+                  res.on('finish', function () {
+                    logservice.logger.info('The requested file' + fileName + ' was temporary stored on the express server and removed successfull')
+                    logservice.removeBlob(fileName)
+                  })
+                })
+                .catch((error) => {
+                  logservice.logger.error('filename error')
+                })
+
+            })
         })
     })
 }
@@ -125,6 +136,9 @@ exports.getTelemetryCSV = function (args, res, next) {
       else {
         route.createBlob()
         .then(createCSV(res))
+        .catch((err) => {
+          logservice.logger.error('Creating blob failed: ' + err.message)
+        })
       }
     })
     .catch((err) => {

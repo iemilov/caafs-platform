@@ -26,7 +26,7 @@ function ExecuteMethod(message, deviceid){
     const methodParams = {
         methodName: message.command, 
         payload: message.payload,
-        responseTimeoutInSeconds: 20 // set response timeout as 15 seconds 
+        responseTimeoutInSeconds: 30 // set response timeout as 20 seconds 
     }
     return new Promise((resolve, reject) => {
         client.invokeDeviceMethod(targetDevice, methodParams, (err, result) => {

@@ -1,13 +1,13 @@
 {
-  "name": "caafs",
-  "version": "1.1.11",
+  "name": "goiot",
+  "version": "1.1.12",
   "author": "Ivan Emilov",
   "contributors": [
     "Ivan Emilov"
   ],
-  "description": "Caafs- Playground for building IoT solutions based on Microsoft Azure",
+  "description": "Swagger API",
   "keywords": [],
-  "license": "ISC",
+  "license": "",
   "main": "app",
   "dependencies": {
     "azure-event-hubs": "0.0.8",
@@ -15,21 +15,17 @@
     "azure-storage": "^2.7.0",
     "bcryptjs": "^2.4.3",
     "express": "4.12.3",
-    "json2csv": "^4.0.2",
     "jsonwebtoken": "7.3.0",
     "level": "^2.1.2",
     "moment": "^2.21.0",
     "mongodb": "^2.2.35",
+    "promise-simple-json2csv": "^1.0.0",
     "socket.io": "^2.0.4",
     "swagger-tools": "^0.10.1",
     "validator": "7.0.0",
     "winston": "^2.4.0",
     "winston-azure-blob-transport": "^0.2.7",
     "yamljs": "0.2.9"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iemilov/caafs-platform"
   },
   "engines": {
     "node": "8.9.3"
