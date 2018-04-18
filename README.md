@@ -17,7 +17,7 @@
 </p>
 
 
-> More details about the application features can be found [here](https://github.com/iemilov/caafs-platform/wiki/Usage#features-overview).
+> More details about the application features can be found [here](https://github.com/iemilov/caafs-platform/wiki).
 
 **Applicable** for almost every industry but rather suitable and **ready to use** for the following real life use cases:
 * Control facility systems based on threshold monitoring of sensor values
