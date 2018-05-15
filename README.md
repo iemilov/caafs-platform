@@ -4,7 +4,7 @@
 
 **C.a.a.f.s** (**Care and Alarms facility systems**) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With **C.a.a.f.s**, you are able to:
 
-[**Platform DEMO**](https://www.youtube.com/watch?v=2rYpoJ-BGSM&t=7s)
+[**Platform DEMO**](https://www.youtube.com/watch?v=2rYpoJ-BGSM&t=7s) <br />
 [**User Interface DEMO**](https://www.youtube.com/watch?v=-2fd9DroR7E)
 
 * Provision and control devices/objects.
