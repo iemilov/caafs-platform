@@ -211,7 +211,7 @@ Please read [CONTRIBUTING.md](https://github.com/iemilov/caafs-platform/blob/mas
 ## Authors
  
 * Ivan Emilov
-* Contact: goiot.dev@gmail.com
+* Contact: caafs.platform@gmail.com
 
 ## License
  
