@@ -2,7 +2,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/IEmilov)
 > *Copyright 2018 [Ivan Emilov]*
 
-**C.a.a.f.s** (**Care and Alarms facility systems**) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With **C.a.a.f.s**, you are able to:
+**C.a.a.f.s** (**Care and Alarms for facility systems**) is cloud based IoT platform/playground that enables building demos, prototypes, showcases or rapidly customizing of different use cases. With **C.a.a.f.s**, you are able to:
 
 [**Platform DEMO**](https://www.youtube.com/watch?v=2rYpoJ-BGSM&t=7s) <br />
 [**User Interface DEMO**](https://www.youtube.com/watch?v=-2fd9DroR7E)
